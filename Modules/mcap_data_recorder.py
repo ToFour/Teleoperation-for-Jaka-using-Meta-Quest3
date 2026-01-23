@@ -96,7 +96,7 @@ class MCAPDataRecorder:
         
         # Recording metadata
         self.metadata = {
-            "robot_type": "franka",
+            "robot_type": "jaka",
             "recording_software": "frankateach",
             "mcap_version": "1.0",
         }
