@@ -413,7 +413,7 @@ def main():
     all_passed, results = test_cameras(camera_configs)
     
     # Exit with appropriate code
-    sys.exit(0 if all_passed else 1)
+    sys.exit(0 if all_passed else 1)    
 
 
 if __name__ == "__main__":

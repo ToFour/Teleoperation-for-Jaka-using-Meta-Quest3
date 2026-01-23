@@ -182,7 +182,7 @@ class OculusVRServer:
                  camera_configs=None,
                  verify_data=False,
                  camera_config_path=None,
-                 enable_cameras=False):
+                 enable_cameras=True):
         """
         Initialize the Oculus VR Server with DROID-exact VRPolicy control
         
@@ -1894,39 +1894,39 @@ Polymetis (euler angle-based). The rotation handling has been adjusted according
     #         print("\n✅ Hot reload stopped")
     #     sys.exit(0)
     
-    # # Handle auto-discovery of cameras
-    # if args.auto_discover_cameras:
-    #     print("🔍 Auto-discovering cameras...")
-    #     try:
-    #         from frankateach.camera_utils import discover_all_cameras, generate_camera_config
+    # Handle auto-discovery of cameras
+    if args.auto_discover_cameras:
+        print("🔍 Auto-discovering cameras...")
+        try:
+            from Modules.camera_utils import discover_all_cameras, generate_camera_config
             
-    #         cameras = discover_all_cameras()
-    #         if cameras:
-    #             # Generate temporary config
-    #             temp_config = "/tmp/cameras_autodiscovered.yaml"
-    #             generate_camera_config(cameras, temp_config)
+            cameras = discover_all_cameras()
+            if cameras:
+                # Generate temporary config
+                temp_config = "/tmp/cameras_autodiscovered.yaml"
+                generate_camera_config(cameras, temp_config)
                 
-    #             # Override camera config path
-    #             args.camera_config = temp_config
-    #             args.enable_cameras = True
+                # Override camera config path
+                args.camera_config = temp_config
+                args.enable_cameras = True
                 
-    #             print(f"✅ Using auto-discovered cameras from: {temp_config}")
-    #         else:
-    #             print("⚠️  No cameras found during auto-discovery")
-    #     except Exception as e:
-    #         print(f"❌ Camera auto-discovery failed: {e}")
+                print(f"✅ Using auto-discovered cameras from: {temp_config}")
+            else:
+                print("⚠️  No cameras found during auto-discovery")
+        except Exception as e:
+            print(f"❌ Camera auto-discovery failed: {e}")
     
-    # # Load camera configuration if provided
-    # camera_configs = None
-    # if args.camera_config:
-    #     try:
-    #         import yaml
-    #         with open(args.camera_config, 'r') as f:
-    #             camera_configs = yaml.safe_load(f)
-    #         print(f"📷 Loaded camera configuration from {args.camera_config}")
-    #     except Exception as e:
-    #         print(f"⚠️  Failed to load camera config: {e}")
-    #         print("   Continuing without camera configuration")
+    # Load camera configuration if provided
+    camera_configs = None
+    if args.camera_config:
+        try:
+            import yaml
+            with open(args.camera_config, 'r') as f:
+                camera_configs = yaml.safe_load(f)
+            print(f"📷 Loaded camera configuration from {args.camera_config}")
+        except Exception as e:
+            print(f"⚠️  Failed to load camera config: {e}")
+            print("   Continuing without camera configuration")
     
     # Normal execution (no hot reload)
     # Create and start server with DROID-exact parameters
@@ -1956,8 +1956,8 @@ Polymetis (euler angle-based). The rotation handling has been adjusted according
         enable_recording=not args.no_recording,
         
         verify_data=args.verify_data,
-        camera_config_path=args.camera_config,
-        enable_cameras=args.enable_cameras
+        camera_config_path='config\camera.yaml',
+        enable_cameras=True
     )
     try:
         server.start()

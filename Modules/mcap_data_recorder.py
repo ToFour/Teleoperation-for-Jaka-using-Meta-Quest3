@@ -105,6 +105,7 @@ class MCAPDataRecorder:
         """Register all MCAP schemas for Labelbox Robotics data format"""
         
         # Robot state schema
+        #机器人状态只需要末端位姿和timestamp
         self._schemas["robot_state"] = self._writer.register_schema(
             name="labelbox_robotics.RobotState",
             encoding="jsonschema",
@@ -399,7 +400,7 @@ class MCAPDataRecorder:
         self.filepath = self.failure_dir / f"trajectory_{timestamp_str}.mcap"
         self._mcap_file = open(self.filepath, "wb")
         self._writer = Writer(self._mcap_file)
-        self._writer.start("labelbox_robotics", library="frankateach")
+        self._writer.start("labelbox_robotics", library="Modules")
         
         # Register schemas
         self._register_schemas()
@@ -441,36 +442,37 @@ class MCAPDataRecorder:
     def _add_robot_model(self):
         """Add robot URDF model to MCAP for visualization"""
         # Add robot description as metadata
+        #robot_info 是为了让可视化工具能够知道urdf里对于数据的具体名称
         robot_info = {
-            "robot_type": "franka_fr3",
-            "urdf_package": "franka_description",
-            "urdf_path": "robots/fr3.urdf.xacro",
+            "robot_type": "jAKA_S5",
+            "urdf_package": "jAKA_S5_description",
+            "urdf_path": "robot/jaka_s5.urdf.xacro",
             "joint_names": [
-                "fr3_joint1", "fr3_joint2", "fr3_joint3", "fr3_joint4",
-                "fr3_joint5", "fr3_joint6", "fr3_joint7",
-                "fr3_finger_joint1", "fr3_finger_joint2"
+                "joint_1", "joint_2", "joint_3", "joint_4",
+                "joint_5", "joint_6"
             ],
             "link_names": [
-                "fr3_link0", "fr3_link1", "fr3_link2", "fr3_link3",
-                "fr3_link4", "fr3_link5", "fr3_link6", "fr3_link7",
-                "fr3_hand", "fr3_leftfinger", "fr3_rightfinger"
+                "Link_00", "Link_01", "Link_02", "Link_03",
+                "Link_04", "Link_05", "Link_06"
             ]
         }
         
         # Add as metadata
         robot_info_str = {k: str(v) for k, v in robot_info.items()}
+        #把字典里的数值转为字符串，因为MCAP元数据数据要求字符串
         self._writer.add_metadata("robot_model", robot_info_str)
         
         # Get the FR3 URDF content
-        fr3_urdf = self._get_fr3_urdf()
+        urdf = self._get_urdf()
         
         # Write URDF as an attachment
+        #将urdf嵌入到MCAP
         self._writer.add_attachment(
             create_time=0,  # Attachment created at start of recording
             log_time=0,
             name="robot_description",
-            media_type="application/xml",
-            data=fr3_urdf.encode("utf-8")
+            media_type="application/xml",#urdf文件一般以xml格式保存
+            data=urdf.encode("utf-8")
         )
         
     def _publish_robot_description(self):
@@ -497,10 +499,10 @@ class MCAPDataRecorder:
             )
         
         # Get the URDF content (same as in _add_robot_model)
-        fr3_urdf = self._get_fr3_urdf()
+        urdf = self._get_urdf()
         
         # Write the URDF as a message
-        msg = {"data": fr3_urdf}
+        msg = {"data": urdf}
         
         # Use actual start time instead of 0
         start_time_ns = int(self.metadata["start_time"] * 1e9)
@@ -520,7 +522,7 @@ class MCAPDataRecorder:
         
         if urdf_path.exists():
             with open(urdf_path, 'r') as f:
-                urdf_content = f.read()
+                urdf_content = f.read() #一次性返回读取整个文件的内容，并将其作为字符串返回
             
             # Replace package:// references with GitHub raw URLs for web accessibility
             github_base_url = "https://raw.githubusercontent.com/frankaemika/franka_description/refs/heads/main"
@@ -537,7 +539,30 @@ class MCAPDataRecorder:
             # Fallback to simplified URDF
             print(f"⚠️  Could not find modified URDF at {urdf_path}, using simplified version")
             return self._get_simplified_fr3_urdf()
-    
+    def _get_urdf(self):
+            """Get the  URDF content - use modified URDF"""
+            # Use the modified URDF
+            urdf_path = Path(__file__)/ "robot" / "jaka_s5.urdf"
+      
+            if urdf_path.exists():
+                with open(urdf_path, 'r') as f:
+                    urdf_content = f.read() #一次性返回读取整个文件的内容，并将其作为字符串返回
+                
+                # Replace package:// references with GitHub raw URLs for web accessibility
+                # github_base_url = "https://raw.githubusercontent.com/frankaemika/franka_description/refs/heads/main"
+                # urdf_content = urdf_content.replace(
+                #     "package://franka_description", 
+                #     github_base_url
+                # )
+                
+                # print(f"✅ Using modified FR3 URDF with snug hand fit (150mm closer)")
+                # print(f"   URDF path: {urdf_path.relative_to(Path(__file__).parent.parent)}")
+                # print(f"   Meshes will be loaded from: {github_base_url}")
+                return urdf_content
+            else:
+                # Fallback to simplified URDF
+                print(f"⚠️  Could not find modified URDF at {urdf_path}, using simplified version")
+                return 0
     def _get_simplified_fr3_urdf(self):
         """Get simplified FR3 URDF as fallback"""
         return """<?xml version="1.0" ?>
