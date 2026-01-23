@@ -98,7 +98,7 @@ class MCAPDataRecorder:
         self.metadata = {
             "robot_type": "jaka",
             "recording_software": "frankateach",
-            "mcap_version": "2.0",
+            "mcap_version": "1.0",
         }
         
     def _register_schemas(self):
