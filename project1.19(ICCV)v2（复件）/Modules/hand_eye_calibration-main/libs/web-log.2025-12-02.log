@@ -1,0 +1,1122 @@
+2025-12-02 18:31:47 - libs.auxiliary - INFO: create folder /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202
+2025-12-02 18:31:47 - __main__ - INFO: 开始手眼标定程序，当前程序版号V1.0.0
+2025-12-02 18:32:02 - __main__ - INFO: 获取状态：成功，当前位姿为[-0.260613477, -0.541278589, 0.21870152999999998, 2.6187765185346734, -0.17020796440640595, -0.6696075055797082]
+2025-12-02 18:32:02 - __main__ - INFO: ===采集第1次数据！
+2025-12-02 18:32:06 - __main__ - INFO: 获取状态：成功，当前位姿为[-0.230757455, -0.649420431, 0.13672347099999999, 2.6607246868016086, -0.6204789829568982, -0.8922664537328981]
+2025-12-02 18:32:06 - __main__ - INFO: ===采集第2次数据！
+2025-12-02 18:32:11 - __main__ - INFO: 获取状态：成功，当前位姿为[-0.28250266199999996, -0.666936336, 0.20099086600000002, 2.372950750568919, -0.6514696774738401, -0.8557818467031134]
+2025-12-02 18:32:11 - __main__ - INFO: ===采集第3次数据！
+2025-12-02 18:32:15 - __main__ - INFO: 获取状态：成功，当前位姿为[-0.468265884, -0.565259621, 0.240939788, 2.1282641590059415, 0.383221071195769, -0.7941761746973062]
+2025-12-02 18:32:15 - __main__ - INFO: ===采集第4次数据！
+2025-12-02 18:32:20 - __main__ - INFO: 获取状态：成功，当前位姿为[-0.39579454399999997, -0.6432441179999999, 0.142813154, 2.0914466304213386, -0.10069753913868372, -0.7584254611646924]
+2025-12-02 18:32:20 - __main__ - INFO: ===采集第5次数据！
+2025-12-02 18:32:26 - __main__ - INFO: 获取状态：成功，当前位姿为[-0.257872164, -0.643533482, 0.149581599, 2.2256810725628218, -0.6692427492193339, -1.7737445910269063]
+2025-12-02 18:32:26 - __main__ - INFO: ===采集第6次数据！
+2025-12-02 18:32:33 - __main__ - INFO: 获取状态：成功，当前位姿为[-0.24768869599999999, -0.684682151, 0.147277303, 2.265222239805039, -0.11516523653358046, -1.0166802597859668]
+2025-12-02 18:32:33 - __main__ - INFO: ===采集第7次数据！
+2025-12-02 18:32:41 - __main__ - INFO: 获取状态：成功，当前位姿为[-0.338339116, -0.607643222, 0.226880412, 1.8332313984142075, 0.37479882781063767, -1.351378786675218]
+2025-12-02 18:32:41 - __main__ - INFO: ===采集第8次数据！
+2025-12-02 18:32:45 - __main__ - INFO: 获取状态：成功，当前位姿为[-0.124219135, -0.689488597, 0.126633422, 2.9484088956574537, -0.6933688019887944, -0.8571191354292841]
+2025-12-02 18:32:45 - __main__ - INFO: ===采集第9次数据！
+2025-12-02 18:32:50 - __main__ - INFO: 获取状态：成功，当前位姿为[-0.08537347599999999, -0.6156732899999999, 0.252971884, -2.4518867741021593, -1.2084471768848297, -1.2865205714352717]
+2025-12-02 18:32:50 - __main__ - INFO: ===采集第10次数据！
+2025-12-02 18:33:01 - __main__ - INFO: 获取状态：成功，当前位姿为[-0.445730501, -0.5997560439999999, 0.194790684, 1.7699099281273496, 0.24945961328157668, -1.5614582218847812]
+2025-12-02 18:33:01 - __main__ - INFO: ===采集第11次数据！
+2025-12-02 18:33:10 - __main__ - INFO: 获取状态：成功，当前位姿为[-0.437060357, -0.5343485769999999, 0.242758979, 1.1241149443702736, -0.026582010279696873, -1.8834509088991465]
+2025-12-02 18:33:10 - __main__ - INFO: ===采集第12次数据！
+2025-12-02 18:33:19 - __main__ - INFO: 获取状态：成功，当前位姿为[-0.335559388, -0.686395185, 0.140936712, 2.013189121088104, -0.16545564229273563, -1.3920902320874826]
+2025-12-02 18:33:19 - __main__ - INFO: ===采集第13次数据！
+2025-12-02 18:33:24 - __main__ - INFO: 获取状态：成功，当前位姿为[-0.348725851, -0.643617122, 0.269714271, 1.3302773894994635, 0.25547407024382673, -1.6185274515520973]
+2025-12-02 18:33:24 - __main__ - INFO: ===采集第14次数据！
+2025-12-02 18:33:32 - __main__ - INFO: 获取状态：成功，当前位姿为[-0.295505492, -0.7045475790000001, 0.134806958, 2.451816140627331, -0.5676299594209043, -0.3642943193614145]
+2025-12-02 18:33:32 - __main__ - INFO: ===采集第15次数据！
+2025-12-02 18:33:39 - __main__ - INFO: 获取状态：成功，当前位姿为[-0.173887048, -0.671065754, 0.15984314, 2.7589138736459113, -1.047324209740415, -0.2660052473240203]
+2025-12-02 18:33:39 - __main__ - INFO: ===采集第16次数据！
+2025-12-02 18:33:43 - __main__ - INFO: 获取状态：成功，当前位姿为[-0.06698870999999999, -0.634517841, 0.276850553, 1.6400484084267384, -1.4533733323409361, 1.1574718864738995]
+2025-12-02 18:33:43 - __main__ - INFO: ===采集第17次数据！
+2025-12-02 18:33:55 - __main__ - INFO: 获取状态：成功，当前位姿为[-0.489255683, -0.5769636, 0.239113587, 1.8432125000740496, 0.3171654553691994, -1.428680937682496]
+2025-12-02 18:33:55 - __main__ - INFO: ===采集第18次数据！
+2025-12-02 18:34:07 - __main__ - INFO: 获取状态：成功，当前位姿为[-0.14899293900000002, -0.651813905, 0.166075489, -2.4522813406861577, -1.4368719947549082, -1.1500013536765883]
+2025-12-02 18:34:07 - __main__ - INFO: ===采集第19次数据！
+2025-12-02 18:34:21 - __main__ - INFO: 获取状态：成功，当前位姿为[-0.451624946, -0.6237551549999999, 0.278059141, 1.6341734207250154, 0.15898150051209534, -1.155642763964517]
+2025-12-02 18:34:21 - __main__ - INFO: ===采集第20次数据！
+2025-12-02 18:34:56 - __main__ - INFO: current_path： /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data
+2025-12-02 18:34:56 - __main__ - INFO: images_path :/home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202
+2025-12-02 18:34:56 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/1.jpg
+2025-12-02 18:34:56 - __main__ - INFO: 图像 1 检测到棋盘格角点
+2025-12-02 18:34:56 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/2.jpg
+2025-12-02 18:34:56 - __main__ - INFO: 图像 2 检测到棋盘格角点
+2025-12-02 18:34:56 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/3.jpg
+2025-12-02 18:34:56 - __main__ - INFO: 图像 3 检测到棋盘格角点
+2025-12-02 18:34:56 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/4.jpg
+2025-12-02 18:34:56 - __main__ - INFO: 图像 4 检测到棋盘格角点
+2025-12-02 18:34:56 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/5.jpg
+2025-12-02 18:34:56 - __main__ - INFO: 图像 5 检测到棋盘格角点
+2025-12-02 18:34:56 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/6.jpg
+2025-12-02 18:34:56 - __main__ - INFO: 图像 6 检测到棋盘格角点
+2025-12-02 18:34:56 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/7.jpg
+2025-12-02 18:34:56 - __main__ - INFO: 图像 7 检测到棋盘格角点
+2025-12-02 18:34:56 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/8.jpg
+2025-12-02 18:34:56 - __main__ - INFO: 图像 8 检测到棋盘格角点
+2025-12-02 18:34:56 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/9.jpg
+2025-12-02 18:34:56 - __main__ - INFO: 图像 9 检测到棋盘格角点
+2025-12-02 18:34:56 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/10.jpg
+2025-12-02 18:34:56 - __main__ - INFO: 图像 10 检测到棋盘格角点
+2025-12-02 18:34:56 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/11.jpg
+2025-12-02 18:34:56 - __main__ - INFO: 图像 11 检测到棋盘格角点
+2025-12-02 18:34:56 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/12.jpg
+2025-12-02 18:34:56 - __main__ - INFO: 图像 12 检测到棋盘格角点
+2025-12-02 18:34:56 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/13.jpg
+2025-12-02 18:34:56 - __main__ - INFO: 图像 13 检测到棋盘格角点
+2025-12-02 18:34:56 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/14.jpg
+2025-12-02 18:34:56 - __main__ - INFO: 图像 14 检测到棋盘格角点
+2025-12-02 18:34:56 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/15.jpg
+2025-12-02 18:34:56 - __main__ - INFO: 图像 15 检测到棋盘格角点
+2025-12-02 18:34:56 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/16.jpg
+2025-12-02 18:34:56 - __main__ - INFO: 图像 16 检测到棋盘格角点
+2025-12-02 18:34:56 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/17.jpg
+2025-12-02 18:34:56 - __main__ - INFO: 图像 17 检测到棋盘格角点
+2025-12-02 18:34:56 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/18.jpg
+2025-12-02 18:34:56 - __main__ - INFO: 图像 18 检测到棋盘格角点
+2025-12-02 18:34:56 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/19.jpg
+2025-12-02 18:34:56 - __main__ - INFO: 图像 19 检测到棋盘格角点
+2025-12-02 18:34:56 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/20.jpg
+2025-12-02 18:34:56 - __main__ - INFO: 图像 20 检测到棋盘格角点
+2025-12-02 18:34:56 - __main__ - INFO: 内参矩阵:
+[[653.34774425   0.         652.11773414]
+ [  0.         653.37896438 358.3709318 ]
+ [  0.           0.           1.        ]]
+2025-12-02 18:34:56 - __main__ - INFO: 畸变系数:
+[[-0.0508706   0.08759494 -0.00144281 -0.00014617 -0.066736  ]]
+2025-12-02 18:34:57 - __main__ - INFO: 图像 1 - 独立位姿计算成功
+2025-12-02 18:34:57 - __main__ - INFO: 图像 2 - 独立位姿计算成功
+2025-12-02 18:34:57 - __main__ - INFO: 图像 3 - 独立位姿计算成功
+2025-12-02 18:34:57 - __main__ - INFO: 图像 4 - 独立位姿计算成功
+2025-12-02 18:34:57 - __main__ - INFO: 图像 5 - 独立位姿计算成功
+2025-12-02 18:34:57 - __main__ - INFO: 图像 6 - 独立位姿计算成功
+2025-12-02 18:34:57 - __main__ - INFO: 图像 7 - 独立位姿计算成功
+2025-12-02 18:34:57 - __main__ - INFO: 图像 8 - 独立位姿计算成功
+2025-12-02 18:34:57 - __main__ - INFO: 图像 9 - 独立位姿计算成功
+2025-12-02 18:34:57 - __main__ - INFO: 图像 10 - 独立位姿计算成功
+2025-12-02 18:34:57 - __main__ - INFO: 图像 11 - 独立位姿计算成功
+2025-12-02 18:34:57 - __main__ - INFO: 图像 12 - 独立位姿计算成功
+2025-12-02 18:34:57 - __main__ - INFO: 图像 13 - 独立位姿计算成功
+2025-12-02 18:34:57 - __main__ - INFO: 图像 14 - 独立位姿计算成功
+2025-12-02 18:34:57 - __main__ - INFO: 图像 15 - 独立位姿计算成功
+2025-12-02 18:34:57 - __main__ - INFO: 图像 16 - 独立位姿计算成功
+2025-12-02 18:34:57 - __main__ - INFO: 图像 17 - 独立位姿计算成功
+2025-12-02 18:34:57 - __main__ - INFO: 图像 18 - 独立位姿计算成功
+2025-12-02 18:34:57 - __main__ - INFO: 图像 19 - 独立位姿计算成功
+2025-12-02 18:34:57 - __main__ - INFO: 图像 20 - 独立位姿计算成功
+2025-12-02 18:34:57 - __main__ - INFO: 成功为 20 张图像计算独立位姿
+2025-12-02 18:34:57 - __main__ - INFO: 图像 1 - 旋转向量: [ 0.35747288  0.16052632 -1.39345676]
+2025-12-02 18:34:57 - __main__ - INFO: 图像 1 - 平移向量: [-0.08368176 -0.06533657  0.48616695]
+2025-12-02 18:34:57 - __main__ - INFO: 图像 2 - 旋转向量: [-0.14516783  0.27920383 -1.5263203 ]
+2025-12-02 18:34:57 - __main__ - INFO: 图像 2 - 平移向量: [-0.06188222  0.0655606   0.49098647]
+2025-12-02 18:34:57 - __main__ - INFO: 图像 3 - 旋转向量: [-0.27419684  0.1000437  -1.34562451]
+2025-12-02 18:34:57 - __main__ - INFO: 图像 3 - 平移向量: [-0.11696001  0.0214585   0.42613478]
+2025-12-02 18:34:57 - __main__ - INFO: 图像 4 - 旋转向量: [ 0.60991631 -0.16559905 -0.75421691]
+2025-12-02 18:34:57 - __main__ - INFO: 图像 4 - 平移向量: [-0.2765111  -0.08158744  0.43259495]
+2025-12-02 18:34:57 - __main__ - INFO: 图像 5 - 旋转向量: [ 0.15660287 -0.15761704 -0.98666213]
+2025-12-02 18:34:57 - __main__ - INFO: 图像 5 - 平移向量: [-0.21464473  0.03051524  0.46467328]
+2025-12-02 18:34:57 - __main__ - INFO: 图像 6 - 旋转向量: [-0.65146765  0.39136253 -0.41261347]
+2025-12-02 18:34:57 - __main__ - INFO: 图像 6 - 平移向量: [-0.08114069 -0.01267003  0.5150496 ]
+2025-12-02 18:34:57 - __main__ - INFO: 图像 7 - 旋转向量: [ 0.12925627  0.12363114 -0.92106858]
+2025-12-02 18:34:57 - __main__ - INFO: 图像 7 - 平移向量: [-0.07665563  0.05767082  0.44490791]
+2025-12-02 18:34:57 - __main__ - INFO: 图像 8 - 旋转向量: [ 0.45707752  0.03146296 -0.2983397 ]
+2025-12-02 18:34:57 - __main__ - INFO: 图像 8 - 平移向量: [-0.14923231 -0.06593153  0.41856801]
+2025-12-02 18:34:57 - __main__ - INFO: 图像 9 - 旋转向量: [-0.0593025   0.39328167 -1.81179444]
+2025-12-02 18:34:57 - __main__ - INFO: 图像 9 - 平移向量: [0.05416727 0.11947989 0.47539242]
+2025-12-02 18:34:57 - __main__ - INFO: 图像 10 - 旋转向量: [-0.34648274  0.50461021 -2.51602085]
+2025-12-02 18:34:57 - __main__ - INFO: 图像 10 - 平移向量: [0.12330623 0.00044426 0.42903875]
+2025-12-02 18:34:57 - __main__ - INFO: 图像 11 - 旋转向量: [ 0.30239415  0.14937066 -0.14865962]
+2025-12-02 18:34:57 - __main__ - INFO: 图像 11 - 平移向量: [-0.25705203 -0.06284706  0.45705172]
+2025-12-02 18:34:57 - __main__ - INFO: 图像 12 - 旋转向量: [ 0.09804493 -0.12673482  0.50902967]
+2025-12-02 18:34:57 - __main__ - INFO: 图像 12 - 平移向量: [-0.20673405 -0.16119013  0.46529846]
+2025-12-02 18:34:57 - __main__ - INFO: 图像 13 - 旋转向量: [-0.07231734  0.18547074 -0.48718826]
+2025-12-02 18:34:57 - __main__ - INFO: 图像 13 - 平移向量: [-0.15966845  0.03603919  0.45716835]
+2025-12-02 18:34:57 - __main__ - INFO: 图像 14 - 旋转向量: [ 0.32571146 -0.1769555   0.14199434]
+2025-12-02 18:34:57 - __main__ - INFO: 图像 14 - 平移向量: [-0.13439736 -0.0838575   0.35959055]
+2025-12-02 18:34:57 - __main__ - INFO: 图像 15 - 旋转向量: [ 0.08627939 -0.09886625 -1.75212848]
+2025-12-02 18:34:57 - __main__ - INFO: 图像 15 - 平移向量: [-0.10796623  0.11632123  0.43478786]
+2025-12-02 18:34:57 - __main__ - INFO: 图像 16 - 旋转向量: [-0.07194286  0.05798841 -2.33358499]
+2025-12-02 18:34:57 - __main__ - INFO: 图像 16 - 平移向量: [0.03069226 0.09345731 0.44462686]
+2025-12-02 18:34:57 - __main__ - INFO: 图像 17 - 旋转向量: [-0.33498712 -0.05337902 -2.86997614]
+2025-12-02 18:34:57 - __main__ - INFO: 图像 17 - 平移向量: [ 0.15945704 -0.01248094  0.37199412]
+2025-12-02 18:34:57 - __main__ - INFO: 图像 18 - 旋转向量: [ 0.38496429  0.11164055 -0.2699265 ]
+2025-12-02 18:34:57 - __main__ - INFO: 图像 18 - 平移向量: [-0.30315323 -0.09979942  0.43552513]
+2025-12-02 18:34:57 - __main__ - INFO: 图像 19 - 旋转向量: [-0.37428821  0.28477976 -2.73460716]
+2025-12-02 18:34:57 - __main__ - INFO: 图像 19 - 平移向量: [0.07129661 0.08159463 0.45852878]
+2025-12-02 18:34:57 - __main__ - INFO: 图像 20 - 旋转向量: [ 0.2147626  -0.26060146 -0.36610596]
+2025-12-02 18:34:57 - __main__ - INFO: 图像 20 - 平移向量: [-0.25364078 -0.0943063   0.36974809]
+2025-12-02 18:34:57 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_1.jpg
+2025-12-02 18:34:57 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_2.jpg
+2025-12-02 18:34:57 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_3.jpg
+2025-12-02 18:34:57 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_4.jpg
+2025-12-02 18:34:57 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_5.jpg
+2025-12-02 18:34:57 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_6.jpg
+2025-12-02 18:34:57 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_7.jpg
+2025-12-02 18:34:57 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_8.jpg
+2025-12-02 18:34:57 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_9.jpg
+2025-12-02 18:34:57 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_10.jpg
+2025-12-02 18:34:57 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_11.jpg
+2025-12-02 18:34:57 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_12.jpg
+2025-12-02 18:34:57 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_13.jpg
+2025-12-02 18:34:57 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_14.jpg
+2025-12-02 18:34:57 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_15.jpg
+2025-12-02 18:34:57 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_16.jpg
+2025-12-02 18:34:57 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_17.jpg
+2025-12-02 18:34:57 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_18.jpg
+2025-12-02 18:34:57 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_19.jpg
+2025-12-02 18:34:57 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_20.jpg
+2025-12-02 18:34:57 - __main__ - INFO: 末端对基座的平移向量:
+[array([-0.18514419, -0.63051625, -0.37914096]), array([-0.50297586, -0.42487501, -0.37242623]), array([ 0.06433014, -0.66127142, -0.33124093]), array([-0.38099463, -0.56099625, -0.15550971]), array([-0.41281257, -0.62330418, -0.3775284 ]), array([ 0.05635074, -0.75732254, -0.27079139]), array([-0.64175374, -0.4101399 , -0.24631651]), array([ 0.25597317, -0.70538334, -0.15143578]), array([-0.72353558, -0.22458111, -0.20593416]), array([-0.28092366, -0.52130603, -0.68967418]), array([-0.51779645, -0.33749639, -0.65789704]), array([-0.0455525 , -0.65940507, -0.59411105]), array([-0.0479844 , -0.76047081, -0.17240155]), array([-0.68893285, -0.19912279, -0.31111784]), array([-0.58025397, -0.14974949, -0.58790909]), array([-0.63726454, -0.22165267, -0.28615509]), array([-0.3454343 , -0.40671444,  0.35377265]), array([-0.55236486, -0.40774541,  0.05407647]), array([-0.33109173, -0.50111384, -0.57727033]), array([-0.00015499, -0.4724667 , -0.78295185])]
+2025-12-02 18:34:57 - __main__ - INFO: 旋转矩阵是:
+ [[ 0.92347047  0.37817976  0.06467117]
+ [-0.36813682  0.92088144 -0.12826792]
+ [-0.10806281  0.0946438   0.98962871]]
+2025-12-02 18:34:57 - __main__ - INFO: 平移向量是:
+ [[-0.30557641]
+ [-0.68578197]
+ [ 0.34030225]]
+2025-12-02 18:34:57 - __main__ - INFO: 四元数是：
+ [ 0.05692171  0.04410855 -0.19057597  0.97902766]
+2025-12-02 18:39:36 - __main__ - INFO: current_path： /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data
+2025-12-02 18:39:36 - __main__ - INFO: images_path :/home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202
+2025-12-02 18:39:36 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/1.jpg
+2025-12-02 18:39:36 - __main__ - INFO: 图像 1 检测到棋盘格角点
+2025-12-02 18:39:36 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/2.jpg
+2025-12-02 18:39:36 - __main__ - INFO: 图像 2 检测到棋盘格角点
+2025-12-02 18:39:36 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/3.jpg
+2025-12-02 18:39:36 - __main__ - INFO: 图像 3 检测到棋盘格角点
+2025-12-02 18:39:36 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/4.jpg
+2025-12-02 18:39:36 - __main__ - INFO: 图像 4 检测到棋盘格角点
+2025-12-02 18:39:36 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/5.jpg
+2025-12-02 18:39:36 - __main__ - INFO: 图像 5 检测到棋盘格角点
+2025-12-02 18:39:36 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/6.jpg
+2025-12-02 18:39:36 - __main__ - INFO: 图像 6 检测到棋盘格角点
+2025-12-02 18:39:36 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/7.jpg
+2025-12-02 18:39:36 - __main__ - INFO: 图像 7 检测到棋盘格角点
+2025-12-02 18:39:36 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/8.jpg
+2025-12-02 18:39:36 - __main__ - INFO: 图像 8 检测到棋盘格角点
+2025-12-02 18:39:36 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/9.jpg
+2025-12-02 18:39:36 - __main__ - INFO: 图像 9 检测到棋盘格角点
+2025-12-02 18:39:36 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/10.jpg
+2025-12-02 18:39:36 - __main__ - INFO: 图像 10 检测到棋盘格角点
+2025-12-02 18:39:36 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/11.jpg
+2025-12-02 18:39:36 - __main__ - INFO: 图像 11 检测到棋盘格角点
+2025-12-02 18:39:36 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/12.jpg
+2025-12-02 18:39:36 - __main__ - INFO: 图像 12 检测到棋盘格角点
+2025-12-02 18:39:36 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/13.jpg
+2025-12-02 18:39:36 - __main__ - INFO: 图像 13 检测到棋盘格角点
+2025-12-02 18:39:36 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/14.jpg
+2025-12-02 18:39:36 - __main__ - INFO: 图像 14 检测到棋盘格角点
+2025-12-02 18:39:36 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/15.jpg
+2025-12-02 18:39:36 - __main__ - INFO: 图像 15 检测到棋盘格角点
+2025-12-02 18:39:36 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/16.jpg
+2025-12-02 18:39:36 - __main__ - INFO: 图像 16 检测到棋盘格角点
+2025-12-02 18:39:36 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/17.jpg
+2025-12-02 18:39:36 - __main__ - INFO: 图像 17 检测到棋盘格角点
+2025-12-02 18:39:36 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/18.jpg
+2025-12-02 18:39:36 - __main__ - INFO: 图像 18 检测到棋盘格角点
+2025-12-02 18:39:36 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/19.jpg
+2025-12-02 18:39:36 - __main__ - INFO: 图像 19 检测到棋盘格角点
+2025-12-02 18:39:36 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/20.jpg
+2025-12-02 18:39:36 - __main__ - INFO: 图像 20 检测到棋盘格角点
+2025-12-02 18:39:36 - __main__ - INFO: 内参矩阵:
+[[653.34774425   0.         652.11773414]
+ [  0.         653.37896438 358.3709318 ]
+ [  0.           0.           1.        ]]
+2025-12-02 18:39:36 - __main__ - INFO: 畸变系数:
+[[-0.0508706   0.08759494 -0.00144281 -0.00014617 -0.066736  ]]
+2025-12-02 18:39:36 - __main__ - INFO: 图像 1 - 独立位姿计算成功
+2025-12-02 18:39:36 - __main__ - INFO: 图像 2 - 独立位姿计算成功
+2025-12-02 18:39:36 - __main__ - INFO: 图像 3 - 独立位姿计算成功
+2025-12-02 18:39:36 - __main__ - INFO: 图像 4 - 独立位姿计算成功
+2025-12-02 18:39:36 - __main__ - INFO: 图像 5 - 独立位姿计算成功
+2025-12-02 18:39:36 - __main__ - INFO: 图像 6 - 独立位姿计算成功
+2025-12-02 18:39:36 - __main__ - INFO: 图像 7 - 独立位姿计算成功
+2025-12-02 18:39:36 - __main__ - INFO: 图像 8 - 独立位姿计算成功
+2025-12-02 18:39:36 - __main__ - INFO: 图像 9 - 独立位姿计算成功
+2025-12-02 18:39:36 - __main__ - INFO: 图像 10 - 独立位姿计算成功
+2025-12-02 18:39:36 - __main__ - INFO: 图像 11 - 独立位姿计算成功
+2025-12-02 18:39:36 - __main__ - INFO: 图像 12 - 独立位姿计算成功
+2025-12-02 18:39:36 - __main__ - INFO: 图像 13 - 独立位姿计算成功
+2025-12-02 18:39:36 - __main__ - INFO: 图像 14 - 独立位姿计算成功
+2025-12-02 18:39:36 - __main__ - INFO: 图像 15 - 独立位姿计算成功
+2025-12-02 18:39:36 - __main__ - INFO: 图像 16 - 独立位姿计算成功
+2025-12-02 18:39:36 - __main__ - INFO: 图像 17 - 独立位姿计算成功
+2025-12-02 18:39:36 - __main__ - INFO: 图像 18 - 独立位姿计算成功
+2025-12-02 18:39:36 - __main__ - INFO: 图像 19 - 独立位姿计算成功
+2025-12-02 18:39:36 - __main__ - INFO: 图像 20 - 独立位姿计算成功
+2025-12-02 18:39:36 - __main__ - INFO: 成功为 20 张图像计算独立位姿
+2025-12-02 18:39:36 - __main__ - INFO: 图像 1 - 旋转向量: [ 0.35747288  0.16052632 -1.39345676]
+2025-12-02 18:39:36 - __main__ - INFO: 图像 1 - 平移向量: [-0.08368176 -0.06533657  0.48616695]
+2025-12-02 18:39:36 - __main__ - INFO: 图像 2 - 旋转向量: [-0.14516783  0.27920383 -1.5263203 ]
+2025-12-02 18:39:36 - __main__ - INFO: 图像 2 - 平移向量: [-0.06188222  0.0655606   0.49098647]
+2025-12-02 18:39:36 - __main__ - INFO: 图像 3 - 旋转向量: [-0.27419684  0.1000437  -1.34562451]
+2025-12-02 18:39:36 - __main__ - INFO: 图像 3 - 平移向量: [-0.11696001  0.0214585   0.42613478]
+2025-12-02 18:39:36 - __main__ - INFO: 图像 4 - 旋转向量: [ 0.60991631 -0.16559905 -0.75421691]
+2025-12-02 18:39:36 - __main__ - INFO: 图像 4 - 平移向量: [-0.2765111  -0.08158744  0.43259495]
+2025-12-02 18:39:36 - __main__ - INFO: 图像 5 - 旋转向量: [ 0.15660287 -0.15761704 -0.98666213]
+2025-12-02 18:39:36 - __main__ - INFO: 图像 5 - 平移向量: [-0.21464473  0.03051524  0.46467328]
+2025-12-02 18:39:36 - __main__ - INFO: 图像 6 - 旋转向量: [-0.65146765  0.39136253 -0.41261347]
+2025-12-02 18:39:36 - __main__ - INFO: 图像 6 - 平移向量: [-0.08114069 -0.01267003  0.5150496 ]
+2025-12-02 18:39:36 - __main__ - INFO: 图像 7 - 旋转向量: [ 0.12925627  0.12363114 -0.92106858]
+2025-12-02 18:39:36 - __main__ - INFO: 图像 7 - 平移向量: [-0.07665563  0.05767082  0.44490791]
+2025-12-02 18:39:36 - __main__ - INFO: 图像 8 - 旋转向量: [ 0.45707752  0.03146296 -0.2983397 ]
+2025-12-02 18:39:36 - __main__ - INFO: 图像 8 - 平移向量: [-0.14923231 -0.06593153  0.41856801]
+2025-12-02 18:39:36 - __main__ - INFO: 图像 9 - 旋转向量: [-0.0593025   0.39328167 -1.81179444]
+2025-12-02 18:39:36 - __main__ - INFO: 图像 9 - 平移向量: [0.05416727 0.11947989 0.47539242]
+2025-12-02 18:39:36 - __main__ - INFO: 图像 10 - 旋转向量: [-0.34648274  0.50461021 -2.51602085]
+2025-12-02 18:39:36 - __main__ - INFO: 图像 10 - 平移向量: [0.12330623 0.00044426 0.42903875]
+2025-12-02 18:39:36 - __main__ - INFO: 图像 11 - 旋转向量: [ 0.30239415  0.14937066 -0.14865962]
+2025-12-02 18:39:36 - __main__ - INFO: 图像 11 - 平移向量: [-0.25705203 -0.06284706  0.45705172]
+2025-12-02 18:39:36 - __main__ - INFO: 图像 12 - 旋转向量: [ 0.09804493 -0.12673482  0.50902967]
+2025-12-02 18:39:36 - __main__ - INFO: 图像 12 - 平移向量: [-0.20673405 -0.16119013  0.46529846]
+2025-12-02 18:39:36 - __main__ - INFO: 图像 13 - 旋转向量: [-0.07231734  0.18547074 -0.48718826]
+2025-12-02 18:39:36 - __main__ - INFO: 图像 13 - 平移向量: [-0.15966845  0.03603919  0.45716835]
+2025-12-02 18:39:36 - __main__ - INFO: 图像 14 - 旋转向量: [ 0.32571146 -0.1769555   0.14199434]
+2025-12-02 18:39:36 - __main__ - INFO: 图像 14 - 平移向量: [-0.13439736 -0.0838575   0.35959055]
+2025-12-02 18:39:36 - __main__ - INFO: 图像 15 - 旋转向量: [ 0.08627939 -0.09886625 -1.75212848]
+2025-12-02 18:39:36 - __main__ - INFO: 图像 15 - 平移向量: [-0.10796623  0.11632123  0.43478786]
+2025-12-02 18:39:36 - __main__ - INFO: 图像 16 - 旋转向量: [-0.07194286  0.05798841 -2.33358499]
+2025-12-02 18:39:36 - __main__ - INFO: 图像 16 - 平移向量: [0.03069226 0.09345731 0.44462686]
+2025-12-02 18:39:36 - __main__ - INFO: 图像 17 - 旋转向量: [-0.33498712 -0.05337902 -2.86997614]
+2025-12-02 18:39:36 - __main__ - INFO: 图像 17 - 平移向量: [ 0.15945704 -0.01248094  0.37199412]
+2025-12-02 18:39:36 - __main__ - INFO: 图像 18 - 旋转向量: [ 0.38496429  0.11164055 -0.2699265 ]
+2025-12-02 18:39:36 - __main__ - INFO: 图像 18 - 平移向量: [-0.30315323 -0.09979942  0.43552513]
+2025-12-02 18:39:36 - __main__ - INFO: 图像 19 - 旋转向量: [-0.37428821  0.28477976 -2.73460716]
+2025-12-02 18:39:36 - __main__ - INFO: 图像 19 - 平移向量: [0.07129661 0.08159463 0.45852878]
+2025-12-02 18:39:36 - __main__ - INFO: 图像 20 - 旋转向量: [ 0.2147626  -0.26060146 -0.36610596]
+2025-12-02 18:39:36 - __main__ - INFO: 图像 20 - 平移向量: [-0.25364078 -0.0943063   0.36974809]
+2025-12-02 18:39:36 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_1.jpg
+2025-12-02 18:39:36 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_2.jpg
+2025-12-02 18:39:36 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_3.jpg
+2025-12-02 18:39:36 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_4.jpg
+2025-12-02 18:39:36 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_5.jpg
+2025-12-02 18:39:36 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_6.jpg
+2025-12-02 18:39:36 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_7.jpg
+2025-12-02 18:39:36 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_8.jpg
+2025-12-02 18:39:36 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_9.jpg
+2025-12-02 18:39:36 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_10.jpg
+2025-12-02 18:39:37 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_11.jpg
+2025-12-02 18:39:37 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_12.jpg
+2025-12-02 18:39:37 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_13.jpg
+2025-12-02 18:39:37 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_14.jpg
+2025-12-02 18:39:37 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_15.jpg
+2025-12-02 18:39:37 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_16.jpg
+2025-12-02 18:39:37 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_17.jpg
+2025-12-02 18:39:37 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_18.jpg
+2025-12-02 18:39:37 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_19.jpg
+2025-12-02 18:39:37 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_20.jpg
+2025-12-02 18:40:22 - __main__ - INFO: current_path： /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data
+2025-12-02 18:40:22 - __main__ - INFO: images_path :/home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202
+2025-12-02 18:40:22 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/1.jpg
+2025-12-02 18:40:22 - __main__ - INFO: 图像 1 检测到棋盘格角点
+2025-12-02 18:40:22 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/2.jpg
+2025-12-02 18:40:22 - __main__ - INFO: 图像 2 检测到棋盘格角点
+2025-12-02 18:40:22 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/3.jpg
+2025-12-02 18:40:22 - __main__ - INFO: 图像 3 检测到棋盘格角点
+2025-12-02 18:40:22 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/4.jpg
+2025-12-02 18:40:22 - __main__ - INFO: 图像 4 检测到棋盘格角点
+2025-12-02 18:40:22 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/5.jpg
+2025-12-02 18:40:22 - __main__ - INFO: 图像 5 检测到棋盘格角点
+2025-12-02 18:40:22 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/6.jpg
+2025-12-02 18:40:22 - __main__ - INFO: 图像 6 检测到棋盘格角点
+2025-12-02 18:40:22 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/7.jpg
+2025-12-02 18:40:22 - __main__ - INFO: 图像 7 检测到棋盘格角点
+2025-12-02 18:40:22 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/8.jpg
+2025-12-02 18:40:22 - __main__ - INFO: 图像 8 检测到棋盘格角点
+2025-12-02 18:40:22 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/9.jpg
+2025-12-02 18:40:22 - __main__ - INFO: 图像 9 检测到棋盘格角点
+2025-12-02 18:40:22 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/10.jpg
+2025-12-02 18:40:22 - __main__ - INFO: 图像 10 检测到棋盘格角点
+2025-12-02 18:40:22 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/11.jpg
+2025-12-02 18:40:22 - __main__ - INFO: 图像 11 检测到棋盘格角点
+2025-12-02 18:40:22 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/12.jpg
+2025-12-02 18:40:22 - __main__ - INFO: 图像 12 检测到棋盘格角点
+2025-12-02 18:40:22 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/13.jpg
+2025-12-02 18:40:22 - __main__ - INFO: 图像 13 检测到棋盘格角点
+2025-12-02 18:40:22 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/14.jpg
+2025-12-02 18:40:22 - __main__ - INFO: 图像 14 检测到棋盘格角点
+2025-12-02 18:40:22 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/15.jpg
+2025-12-02 18:40:22 - __main__ - INFO: 图像 15 检测到棋盘格角点
+2025-12-02 18:40:22 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/16.jpg
+2025-12-02 18:40:22 - __main__ - INFO: 图像 16 检测到棋盘格角点
+2025-12-02 18:40:22 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/17.jpg
+2025-12-02 18:40:22 - __main__ - INFO: 图像 17 检测到棋盘格角点
+2025-12-02 18:40:22 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/18.jpg
+2025-12-02 18:40:22 - __main__ - INFO: 图像 18 检测到棋盘格角点
+2025-12-02 18:40:22 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/19.jpg
+2025-12-02 18:40:22 - __main__ - INFO: 图像 19 检测到棋盘格角点
+2025-12-02 18:40:22 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/20.jpg
+2025-12-02 18:40:22 - __main__ - INFO: 图像 20 检测到棋盘格角点
+2025-12-02 18:40:22 - __main__ - INFO: 内参矩阵:
+[[653.34774425   0.         652.11773414]
+ [  0.         653.37896438 358.3709318 ]
+ [  0.           0.           1.        ]]
+2025-12-02 18:40:22 - __main__ - INFO: 畸变系数:
+[[-0.0508706   0.08759494 -0.00144281 -0.00014617 -0.066736  ]]
+2025-12-02 18:40:22 - __main__ - INFO: 图像 1 - 独立位姿计算成功
+2025-12-02 18:40:22 - __main__ - INFO: 图像 2 - 独立位姿计算成功
+2025-12-02 18:40:22 - __main__ - INFO: 图像 3 - 独立位姿计算成功
+2025-12-02 18:40:22 - __main__ - INFO: 图像 4 - 独立位姿计算成功
+2025-12-02 18:40:22 - __main__ - INFO: 图像 5 - 独立位姿计算成功
+2025-12-02 18:40:22 - __main__ - INFO: 图像 6 - 独立位姿计算成功
+2025-12-02 18:40:22 - __main__ - INFO: 图像 7 - 独立位姿计算成功
+2025-12-02 18:40:22 - __main__ - INFO: 图像 8 - 独立位姿计算成功
+2025-12-02 18:40:22 - __main__ - INFO: 图像 9 - 独立位姿计算成功
+2025-12-02 18:40:22 - __main__ - INFO: 图像 10 - 独立位姿计算成功
+2025-12-02 18:40:22 - __main__ - INFO: 图像 11 - 独立位姿计算成功
+2025-12-02 18:40:22 - __main__ - INFO: 图像 12 - 独立位姿计算成功
+2025-12-02 18:40:22 - __main__ - INFO: 图像 13 - 独立位姿计算成功
+2025-12-02 18:40:22 - __main__ - INFO: 图像 14 - 独立位姿计算成功
+2025-12-02 18:40:22 - __main__ - INFO: 图像 15 - 独立位姿计算成功
+2025-12-02 18:40:22 - __main__ - INFO: 图像 16 - 独立位姿计算成功
+2025-12-02 18:40:22 - __main__ - INFO: 图像 17 - 独立位姿计算成功
+2025-12-02 18:40:22 - __main__ - INFO: 图像 18 - 独立位姿计算成功
+2025-12-02 18:40:22 - __main__ - INFO: 图像 19 - 独立位姿计算成功
+2025-12-02 18:40:22 - __main__ - INFO: 图像 20 - 独立位姿计算成功
+2025-12-02 18:40:22 - __main__ - INFO: 成功为 20 张图像计算独立位姿
+2025-12-02 18:40:22 - __main__ - INFO: 图像 1 - 旋转向量: [ 0.35747288  0.16052632 -1.39345676]
+2025-12-02 18:40:22 - __main__ - INFO: 图像 1 - 平移向量: [-0.08368176 -0.06533657  0.48616695]
+2025-12-02 18:40:22 - __main__ - INFO: 图像 2 - 旋转向量: [-0.14516783  0.27920383 -1.5263203 ]
+2025-12-02 18:40:22 - __main__ - INFO: 图像 2 - 平移向量: [-0.06188222  0.0655606   0.49098647]
+2025-12-02 18:40:22 - __main__ - INFO: 图像 3 - 旋转向量: [-0.27419684  0.1000437  -1.34562451]
+2025-12-02 18:40:22 - __main__ - INFO: 图像 3 - 平移向量: [-0.11696001  0.0214585   0.42613478]
+2025-12-02 18:40:22 - __main__ - INFO: 图像 4 - 旋转向量: [ 0.60991631 -0.16559905 -0.75421691]
+2025-12-02 18:40:22 - __main__ - INFO: 图像 4 - 平移向量: [-0.2765111  -0.08158744  0.43259495]
+2025-12-02 18:40:22 - __main__ - INFO: 图像 5 - 旋转向量: [ 0.15660287 -0.15761704 -0.98666213]
+2025-12-02 18:40:22 - __main__ - INFO: 图像 5 - 平移向量: [-0.21464473  0.03051524  0.46467328]
+2025-12-02 18:40:22 - __main__ - INFO: 图像 6 - 旋转向量: [-0.65146765  0.39136253 -0.41261347]
+2025-12-02 18:40:22 - __main__ - INFO: 图像 6 - 平移向量: [-0.08114069 -0.01267003  0.5150496 ]
+2025-12-02 18:40:22 - __main__ - INFO: 图像 7 - 旋转向量: [ 0.12925627  0.12363114 -0.92106858]
+2025-12-02 18:40:22 - __main__ - INFO: 图像 7 - 平移向量: [-0.07665563  0.05767082  0.44490791]
+2025-12-02 18:40:22 - __main__ - INFO: 图像 8 - 旋转向量: [ 0.45707752  0.03146296 -0.2983397 ]
+2025-12-02 18:40:22 - __main__ - INFO: 图像 8 - 平移向量: [-0.14923231 -0.06593153  0.41856801]
+2025-12-02 18:40:22 - __main__ - INFO: 图像 9 - 旋转向量: [-0.0593025   0.39328167 -1.81179444]
+2025-12-02 18:40:22 - __main__ - INFO: 图像 9 - 平移向量: [0.05416727 0.11947989 0.47539242]
+2025-12-02 18:40:22 - __main__ - INFO: 图像 10 - 旋转向量: [-0.34648274  0.50461021 -2.51602085]
+2025-12-02 18:40:22 - __main__ - INFO: 图像 10 - 平移向量: [0.12330623 0.00044426 0.42903875]
+2025-12-02 18:40:22 - __main__ - INFO: 图像 11 - 旋转向量: [ 0.30239415  0.14937066 -0.14865962]
+2025-12-02 18:40:22 - __main__ - INFO: 图像 11 - 平移向量: [-0.25705203 -0.06284706  0.45705172]
+2025-12-02 18:40:22 - __main__ - INFO: 图像 12 - 旋转向量: [ 0.09804493 -0.12673482  0.50902967]
+2025-12-02 18:40:22 - __main__ - INFO: 图像 12 - 平移向量: [-0.20673405 -0.16119013  0.46529846]
+2025-12-02 18:40:22 - __main__ - INFO: 图像 13 - 旋转向量: [-0.07231734  0.18547074 -0.48718826]
+2025-12-02 18:40:22 - __main__ - INFO: 图像 13 - 平移向量: [-0.15966845  0.03603919  0.45716835]
+2025-12-02 18:40:22 - __main__ - INFO: 图像 14 - 旋转向量: [ 0.32571146 -0.1769555   0.14199434]
+2025-12-02 18:40:22 - __main__ - INFO: 图像 14 - 平移向量: [-0.13439736 -0.0838575   0.35959055]
+2025-12-02 18:40:22 - __main__ - INFO: 图像 15 - 旋转向量: [ 0.08627939 -0.09886625 -1.75212848]
+2025-12-02 18:40:22 - __main__ - INFO: 图像 15 - 平移向量: [-0.10796623  0.11632123  0.43478786]
+2025-12-02 18:40:22 - __main__ - INFO: 图像 16 - 旋转向量: [-0.07194286  0.05798841 -2.33358499]
+2025-12-02 18:40:22 - __main__ - INFO: 图像 16 - 平移向量: [0.03069226 0.09345731 0.44462686]
+2025-12-02 18:40:22 - __main__ - INFO: 图像 17 - 旋转向量: [-0.33498712 -0.05337902 -2.86997614]
+2025-12-02 18:40:22 - __main__ - INFO: 图像 17 - 平移向量: [ 0.15945704 -0.01248094  0.37199412]
+2025-12-02 18:40:22 - __main__ - INFO: 图像 18 - 旋转向量: [ 0.38496429  0.11164055 -0.2699265 ]
+2025-12-02 18:40:22 - __main__ - INFO: 图像 18 - 平移向量: [-0.30315323 -0.09979942  0.43552513]
+2025-12-02 18:40:22 - __main__ - INFO: 图像 19 - 旋转向量: [-0.37428821  0.28477976 -2.73460716]
+2025-12-02 18:40:22 - __main__ - INFO: 图像 19 - 平移向量: [0.07129661 0.08159463 0.45852878]
+2025-12-02 18:40:22 - __main__ - INFO: 图像 20 - 旋转向量: [ 0.2147626  -0.26060146 -0.36610596]
+2025-12-02 18:40:22 - __main__ - INFO: 图像 20 - 平移向量: [-0.25364078 -0.0943063   0.36974809]
+2025-12-02 18:40:22 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_1.jpg
+2025-12-02 18:40:22 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_2.jpg
+2025-12-02 18:40:22 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_3.jpg
+2025-12-02 18:40:22 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_4.jpg
+2025-12-02 18:40:22 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_5.jpg
+2025-12-02 18:40:22 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_6.jpg
+2025-12-02 18:40:22 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_7.jpg
+2025-12-02 18:40:22 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_8.jpg
+2025-12-02 18:40:22 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_9.jpg
+2025-12-02 18:40:22 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_10.jpg
+2025-12-02 18:40:22 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_11.jpg
+2025-12-02 18:40:22 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_12.jpg
+2025-12-02 18:40:22 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_13.jpg
+2025-12-02 18:40:22 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_14.jpg
+2025-12-02 18:40:22 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_15.jpg
+2025-12-02 18:40:22 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_16.jpg
+2025-12-02 18:40:22 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_17.jpg
+2025-12-02 18:40:22 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_18.jpg
+2025-12-02 18:40:22 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_19.jpg
+2025-12-02 18:40:23 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_20.jpg
+2025-12-02 18:40:54 - __main__ - INFO: current_path： /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data
+2025-12-02 18:40:54 - __main__ - INFO: images_path :/home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202
+2025-12-02 18:40:54 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/1.jpg
+2025-12-02 18:40:54 - __main__ - INFO: 图像 1 检测到棋盘格角点
+2025-12-02 18:40:54 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/2.jpg
+2025-12-02 18:40:54 - __main__ - INFO: 图像 2 检测到棋盘格角点
+2025-12-02 18:40:54 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/3.jpg
+2025-12-02 18:40:54 - __main__ - INFO: 图像 3 检测到棋盘格角点
+2025-12-02 18:40:54 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/4.jpg
+2025-12-02 18:40:54 - __main__ - INFO: 图像 4 检测到棋盘格角点
+2025-12-02 18:40:54 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/5.jpg
+2025-12-02 18:40:54 - __main__ - INFO: 图像 5 检测到棋盘格角点
+2025-12-02 18:40:54 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/6.jpg
+2025-12-02 18:40:54 - __main__ - INFO: 图像 6 检测到棋盘格角点
+2025-12-02 18:40:54 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/7.jpg
+2025-12-02 18:40:54 - __main__ - INFO: 图像 7 检测到棋盘格角点
+2025-12-02 18:40:54 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/8.jpg
+2025-12-02 18:40:54 - __main__ - INFO: 图像 8 检测到棋盘格角点
+2025-12-02 18:40:54 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/9.jpg
+2025-12-02 18:40:54 - __main__ - INFO: 图像 9 检测到棋盘格角点
+2025-12-02 18:40:54 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/10.jpg
+2025-12-02 18:40:54 - __main__ - INFO: 图像 10 检测到棋盘格角点
+2025-12-02 18:40:54 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/11.jpg
+2025-12-02 18:40:54 - __main__ - INFO: 图像 11 检测到棋盘格角点
+2025-12-02 18:40:54 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/12.jpg
+2025-12-02 18:40:54 - __main__ - INFO: 图像 12 检测到棋盘格角点
+2025-12-02 18:40:54 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/13.jpg
+2025-12-02 18:40:54 - __main__ - INFO: 图像 13 检测到棋盘格角点
+2025-12-02 18:40:54 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/14.jpg
+2025-12-02 18:40:54 - __main__ - INFO: 图像 14 检测到棋盘格角点
+2025-12-02 18:40:54 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/15.jpg
+2025-12-02 18:40:54 - __main__ - INFO: 图像 15 检测到棋盘格角点
+2025-12-02 18:40:54 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/16.jpg
+2025-12-02 18:40:54 - __main__ - INFO: 图像 16 检测到棋盘格角点
+2025-12-02 18:40:54 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/17.jpg
+2025-12-02 18:40:54 - __main__ - INFO: 图像 17 检测到棋盘格角点
+2025-12-02 18:40:54 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/18.jpg
+2025-12-02 18:40:54 - __main__ - INFO: 图像 18 检测到棋盘格角点
+2025-12-02 18:40:54 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/19.jpg
+2025-12-02 18:40:54 - __main__ - INFO: 图像 19 检测到棋盘格角点
+2025-12-02 18:40:54 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/20.jpg
+2025-12-02 18:40:54 - __main__ - INFO: 图像 20 检测到棋盘格角点
+2025-12-02 18:40:54 - __main__ - INFO: 内参矩阵:
+[[653.34774425   0.         652.11773414]
+ [  0.         653.37896438 358.3709318 ]
+ [  0.           0.           1.        ]]
+2025-12-02 18:40:54 - __main__ - INFO: 畸变系数:
+[[-0.0508706   0.08759494 -0.00144281 -0.00014617 -0.066736  ]]
+2025-12-02 18:40:54 - __main__ - INFO: 图像 1 - 独立位姿计算成功
+2025-12-02 18:40:54 - __main__ - INFO: 图像 2 - 独立位姿计算成功
+2025-12-02 18:40:54 - __main__ - INFO: 图像 3 - 独立位姿计算成功
+2025-12-02 18:40:54 - __main__ - INFO: 图像 4 - 独立位姿计算成功
+2025-12-02 18:40:54 - __main__ - INFO: 图像 5 - 独立位姿计算成功
+2025-12-02 18:40:54 - __main__ - INFO: 图像 6 - 独立位姿计算成功
+2025-12-02 18:40:54 - __main__ - INFO: 图像 7 - 独立位姿计算成功
+2025-12-02 18:40:54 - __main__ - INFO: 图像 8 - 独立位姿计算成功
+2025-12-02 18:40:54 - __main__ - INFO: 图像 9 - 独立位姿计算成功
+2025-12-02 18:40:54 - __main__ - INFO: 图像 10 - 独立位姿计算成功
+2025-12-02 18:40:54 - __main__ - INFO: 图像 11 - 独立位姿计算成功
+2025-12-02 18:40:54 - __main__ - INFO: 图像 12 - 独立位姿计算成功
+2025-12-02 18:40:54 - __main__ - INFO: 图像 13 - 独立位姿计算成功
+2025-12-02 18:40:54 - __main__ - INFO: 图像 14 - 独立位姿计算成功
+2025-12-02 18:40:54 - __main__ - INFO: 图像 15 - 独立位姿计算成功
+2025-12-02 18:40:54 - __main__ - INFO: 图像 16 - 独立位姿计算成功
+2025-12-02 18:40:54 - __main__ - INFO: 图像 17 - 独立位姿计算成功
+2025-12-02 18:40:54 - __main__ - INFO: 图像 18 - 独立位姿计算成功
+2025-12-02 18:40:54 - __main__ - INFO: 图像 19 - 独立位姿计算成功
+2025-12-02 18:40:54 - __main__ - INFO: 图像 20 - 独立位姿计算成功
+2025-12-02 18:40:54 - __main__ - INFO: 成功为 20 张图像计算独立位姿
+2025-12-02 18:40:54 - __main__ - INFO: 图像 1 - 旋转向量: [ 0.35747288  0.16052632 -1.39345676]
+2025-12-02 18:40:54 - __main__ - INFO: 图像 1 - 平移向量: [-0.08368176 -0.06533657  0.48616695]
+2025-12-02 18:40:54 - __main__ - INFO: 图像 2 - 旋转向量: [-0.14516783  0.27920383 -1.5263203 ]
+2025-12-02 18:40:54 - __main__ - INFO: 图像 2 - 平移向量: [-0.06188222  0.0655606   0.49098647]
+2025-12-02 18:40:54 - __main__ - INFO: 图像 3 - 旋转向量: [-0.27419684  0.1000437  -1.34562451]
+2025-12-02 18:40:54 - __main__ - INFO: 图像 3 - 平移向量: [-0.11696001  0.0214585   0.42613478]
+2025-12-02 18:40:54 - __main__ - INFO: 图像 4 - 旋转向量: [ 0.60991631 -0.16559905 -0.75421691]
+2025-12-02 18:40:54 - __main__ - INFO: 图像 4 - 平移向量: [-0.2765111  -0.08158744  0.43259495]
+2025-12-02 18:40:54 - __main__ - INFO: 图像 5 - 旋转向量: [ 0.15660287 -0.15761704 -0.98666213]
+2025-12-02 18:40:54 - __main__ - INFO: 图像 5 - 平移向量: [-0.21464473  0.03051524  0.46467328]
+2025-12-02 18:40:54 - __main__ - INFO: 图像 6 - 旋转向量: [-0.65146765  0.39136253 -0.41261347]
+2025-12-02 18:40:54 - __main__ - INFO: 图像 6 - 平移向量: [-0.08114069 -0.01267003  0.5150496 ]
+2025-12-02 18:40:54 - __main__ - INFO: 图像 7 - 旋转向量: [ 0.12925627  0.12363114 -0.92106858]
+2025-12-02 18:40:54 - __main__ - INFO: 图像 7 - 平移向量: [-0.07665563  0.05767082  0.44490791]
+2025-12-02 18:40:54 - __main__ - INFO: 图像 8 - 旋转向量: [ 0.45707752  0.03146296 -0.2983397 ]
+2025-12-02 18:40:54 - __main__ - INFO: 图像 8 - 平移向量: [-0.14923231 -0.06593153  0.41856801]
+2025-12-02 18:40:54 - __main__ - INFO: 图像 9 - 旋转向量: [-0.0593025   0.39328167 -1.81179444]
+2025-12-02 18:40:54 - __main__ - INFO: 图像 9 - 平移向量: [0.05416727 0.11947989 0.47539242]
+2025-12-02 18:40:54 - __main__ - INFO: 图像 10 - 旋转向量: [-0.34648274  0.50461021 -2.51602085]
+2025-12-02 18:40:54 - __main__ - INFO: 图像 10 - 平移向量: [0.12330623 0.00044426 0.42903875]
+2025-12-02 18:40:54 - __main__ - INFO: 图像 11 - 旋转向量: [ 0.30239415  0.14937066 -0.14865962]
+2025-12-02 18:40:54 - __main__ - INFO: 图像 11 - 平移向量: [-0.25705203 -0.06284706  0.45705172]
+2025-12-02 18:40:54 - __main__ - INFO: 图像 12 - 旋转向量: [ 0.09804493 -0.12673482  0.50902967]
+2025-12-02 18:40:54 - __main__ - INFO: 图像 12 - 平移向量: [-0.20673405 -0.16119013  0.46529846]
+2025-12-02 18:40:54 - __main__ - INFO: 图像 13 - 旋转向量: [-0.07231734  0.18547074 -0.48718826]
+2025-12-02 18:40:54 - __main__ - INFO: 图像 13 - 平移向量: [-0.15966845  0.03603919  0.45716835]
+2025-12-02 18:40:54 - __main__ - INFO: 图像 14 - 旋转向量: [ 0.32571146 -0.1769555   0.14199434]
+2025-12-02 18:40:54 - __main__ - INFO: 图像 14 - 平移向量: [-0.13439736 -0.0838575   0.35959055]
+2025-12-02 18:40:54 - __main__ - INFO: 图像 15 - 旋转向量: [ 0.08627939 -0.09886625 -1.75212848]
+2025-12-02 18:40:54 - __main__ - INFO: 图像 15 - 平移向量: [-0.10796623  0.11632123  0.43478786]
+2025-12-02 18:40:54 - __main__ - INFO: 图像 16 - 旋转向量: [-0.07194286  0.05798841 -2.33358499]
+2025-12-02 18:40:54 - __main__ - INFO: 图像 16 - 平移向量: [0.03069226 0.09345731 0.44462686]
+2025-12-02 18:40:54 - __main__ - INFO: 图像 17 - 旋转向量: [-0.33498712 -0.05337902 -2.86997614]
+2025-12-02 18:40:54 - __main__ - INFO: 图像 17 - 平移向量: [ 0.15945704 -0.01248094  0.37199412]
+2025-12-02 18:40:54 - __main__ - INFO: 图像 18 - 旋转向量: [ 0.38496429  0.11164055 -0.2699265 ]
+2025-12-02 18:40:54 - __main__ - INFO: 图像 18 - 平移向量: [-0.30315323 -0.09979942  0.43552513]
+2025-12-02 18:40:54 - __main__ - INFO: 图像 19 - 旋转向量: [-0.37428821  0.28477976 -2.73460716]
+2025-12-02 18:40:54 - __main__ - INFO: 图像 19 - 平移向量: [0.07129661 0.08159463 0.45852878]
+2025-12-02 18:40:54 - __main__ - INFO: 图像 20 - 旋转向量: [ 0.2147626  -0.26060146 -0.36610596]
+2025-12-02 18:40:54 - __main__ - INFO: 图像 20 - 平移向量: [-0.25364078 -0.0943063   0.36974809]
+2025-12-02 18:40:54 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_1.jpg
+2025-12-02 18:40:54 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_2.jpg
+2025-12-02 18:40:54 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_3.jpg
+2025-12-02 18:40:54 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_4.jpg
+2025-12-02 18:40:54 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_5.jpg
+2025-12-02 18:40:54 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_6.jpg
+2025-12-02 18:40:54 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_7.jpg
+2025-12-02 18:40:54 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_8.jpg
+2025-12-02 18:40:54 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_9.jpg
+2025-12-02 18:40:54 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_10.jpg
+2025-12-02 18:40:54 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_11.jpg
+2025-12-02 18:40:54 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_12.jpg
+2025-12-02 18:40:54 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_13.jpg
+2025-12-02 18:40:54 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_14.jpg
+2025-12-02 18:40:54 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_15.jpg
+2025-12-02 18:40:54 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_16.jpg
+2025-12-02 18:40:54 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_17.jpg
+2025-12-02 18:40:54 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_18.jpg
+2025-12-02 18:40:54 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_19.jpg
+2025-12-02 18:40:54 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data20251202/annotated_images/annotated_20.jpg
+2025-12-02 18:49:53 - libs.auxiliary - INFO: create folder /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201
+2025-12-02 18:49:54 - __main__ - INFO: 开始手眼标定程序，当前程序版号V1.0.0
+2025-12-02 18:49:57 - __main__ - INFO: 获取状态：成功，当前位姿为[-0.448418547, -0.6275283150000001, 0.272694709, 1.652849962157804, 0.1795961253594685, -1.1586390754111708]
+2025-12-02 18:49:57 - __main__ - INFO: ===采集第1次数据！
+2025-12-02 18:50:04 - __main__ - INFO: 获取状态：成功，当前位姿为[-0.381455486, -0.6215249740000001, 0.26466077, 1.6492086293794908, 0.40569958551122437, -1.362425080230845]
+2025-12-02 18:50:04 - __main__ - INFO: ===采集第2次数据！
+2025-12-02 18:50:09 - __main__ - INFO: 获取状态：成功，当前位姿为[-0.344177531, -0.7281056730000001, 0.191495794, 2.258906696093527, 0.0037632614798576536, -0.5238147077333556]
+2025-12-02 18:50:09 - __main__ - INFO: ===采集第3次数据！
+2025-12-02 18:50:13 - __main__ - INFO: 获取状态：成功，当前位姿为[-0.226551909, -0.622051611, 0.196424607, 2.8581178472772013, -0.3595972194652773, -0.4487031718301332]
+2025-12-02 18:50:13 - __main__ - INFO: ===采集第4次数据！
+2025-12-02 18:50:17 - __main__ - INFO: 获取状态：成功，当前位姿为[-0.07349955300000001, -0.638307697, 0.202667501, -2.793494919873716, -0.8076472367294365, -0.8880347458818052]
+2025-12-02 18:50:17 - __main__ - INFO: ===采集第5次数据！
+2025-12-02 18:50:21 - __main__ - INFO: 获取状态：成功，当前位姿为[-0.08492869, -0.6394292, 0.191664577, -2.363633362717025, -0.9485339140484329, -1.2290012737137437]
+2025-12-02 18:50:22 - __main__ - INFO: ===采集第6次数据！
+2025-12-02 18:50:26 - __main__ - INFO: 获取状态：成功，当前位姿为[-0.375276481, -0.682300308, 0.24448415499999998, 2.266086579210504, 0.18770333681461485, -0.9598111321173917]
+2025-12-02 18:50:26 - __main__ - INFO: ===采集第7次数据！
+2025-12-02 18:50:32 - __main__ - INFO: 获取状态：成功，当前位姿为[-0.3711911, -0.565082871, 0.23217676599999998, 1.6915667056745494, 0.18100204043182752, -1.6711489539668012]
+2025-12-02 18:50:32 - __main__ - INFO: ===采集第8次数据！
+2025-12-02 18:50:37 - __main__ - INFO: 获取状态：成功，当前位姿为[-0.367945942, -0.6921900940000001, 0.25219230200000003, 1.3470800581808484, 0.2224967372525096, -1.161273841903274]
+2025-12-02 18:50:37 - __main__ - INFO: ===采集第9次数据！
+2025-12-02 18:50:42 - __main__ - INFO: 获取状态：成功，当前位姿为[-0.306135952, -0.620973224, 0.161604531, 1.8658955146179617, -0.3383630376400312, -1.7692118313331369]
+2025-12-02 18:50:42 - __main__ - INFO: ===采集第10次数据！
+2025-12-02 18:50:48 - __main__ - INFO: 获取状态：成功，当前位姿为[-0.196154217, -0.730389726, 0.14473556199999998, 2.379170109185353, -0.34857352792346336, -1.5834171865885032]
+2025-12-02 18:50:48 - __main__ - INFO: ===采集第11次数据！
+2025-12-02 18:50:53 - __main__ - INFO: 获取状态：成功，当前位姿为[-0.30878965799999997, -0.5439468829999999, 0.227500411, 2.9789925270329527, -0.07423051115010823, -0.524311725144446]
+2025-12-02 18:50:53 - __main__ - INFO: ===采集第12次数据！
+2025-12-02 18:51:00 - __main__ - INFO: 获取状态：成功，当前位姿为[-0.198497148, -0.711274458, 0.140470919, 2.782483829609101, -0.15196463114725492, -1.036425082347316]
+2025-12-02 18:51:00 - __main__ - INFO: ===采集第13次数据！
+2025-12-02 18:51:10 - __main__ - INFO: 获取状态：成功，当前位姿为[-0.18484676, -0.667870125, 0.174248875, 2.95032240483617, -0.6734430236905984, -0.3508159793063032]
+2025-12-02 18:51:10 - __main__ - INFO: ===采集第14次数据！
+2025-12-02 18:51:20 - __main__ - INFO: 获取状态：成功，当前位姿为[-0.372758234, -0.678201902, 0.32763269100000003, 1.1421292206183928, -0.20019235443652564, -1.5479998833028976]
+2025-12-02 18:51:20 - __main__ - INFO: ===采集第15次数据！
+2025-12-02 18:51:42 - __main__ - INFO: current_path： /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data
+2025-12-02 18:51:42 - __main__ - INFO: images_path :/home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201
+2025-12-02 18:51:42 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/1.jpg
+2025-12-02 18:51:42 - __main__ - INFO: 图像 1 检测到棋盘格角点
+2025-12-02 18:51:42 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/2.jpg
+2025-12-02 18:51:42 - __main__ - INFO: 图像 2 检测到棋盘格角点
+2025-12-02 18:51:42 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/3.jpg
+2025-12-02 18:51:42 - __main__ - INFO: 图像 3 检测到棋盘格角点
+2025-12-02 18:51:42 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/4.jpg
+2025-12-02 18:51:42 - __main__ - INFO: 图像 4 检测到棋盘格角点
+2025-12-02 18:51:42 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/5.jpg
+2025-12-02 18:51:42 - __main__ - INFO: 图像 5 检测到棋盘格角点
+2025-12-02 18:51:42 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/6.jpg
+2025-12-02 18:51:42 - __main__ - INFO: 图像 6 检测到棋盘格角点
+2025-12-02 18:51:42 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/7.jpg
+2025-12-02 18:51:42 - __main__ - INFO: 图像 7 检测到棋盘格角点
+2025-12-02 18:51:42 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/8.jpg
+2025-12-02 18:51:42 - __main__ - INFO: 图像 8 检测到棋盘格角点
+2025-12-02 18:51:42 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/9.jpg
+2025-12-02 18:51:42 - __main__ - INFO: 图像 9 检测到棋盘格角点
+2025-12-02 18:51:42 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/10.jpg
+2025-12-02 18:51:42 - __main__ - INFO: 图像 10 检测到棋盘格角点
+2025-12-02 18:51:42 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/11.jpg
+2025-12-02 18:51:42 - __main__ - INFO: 图像 11 检测到棋盘格角点
+2025-12-02 18:51:42 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/12.jpg
+2025-12-02 18:51:42 - __main__ - INFO: 图像 12 检测到棋盘格角点
+2025-12-02 18:51:42 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/13.jpg
+2025-12-02 18:51:42 - __main__ - INFO: 图像 13 检测到棋盘格角点
+2025-12-02 18:51:42 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/14.jpg
+2025-12-02 18:51:42 - __main__ - INFO: 图像 14 检测到棋盘格角点
+2025-12-02 18:51:42 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/15.jpg
+2025-12-02 18:51:42 - __main__ - INFO: 图像 15 检测到棋盘格角点
+2025-12-02 18:51:42 - __main__ - INFO: 内参矩阵:
+[[647.9011397    0.         656.35882857]
+ [  0.         647.85700588 364.15301662]
+ [  0.           0.           1.        ]]
+2025-12-02 18:51:42 - __main__ - INFO: 畸变系数:
+[[-0.05323749  0.06645562  0.00070235  0.00121296 -0.02285516]]
+2025-12-02 18:51:42 - __main__ - INFO: 图像 1 - 独立位姿计算成功
+2025-12-02 18:51:42 - __main__ - INFO: 图像 2 - 独立位姿计算成功
+2025-12-02 18:51:42 - __main__ - INFO: 图像 3 - 独立位姿计算成功
+2025-12-02 18:51:42 - __main__ - INFO: 图像 4 - 独立位姿计算成功
+2025-12-02 18:51:42 - __main__ - INFO: 图像 5 - 独立位姿计算成功
+2025-12-02 18:51:42 - __main__ - INFO: 图像 6 - 独立位姿计算成功
+2025-12-02 18:51:42 - __main__ - INFO: 图像 7 - 独立位姿计算成功
+2025-12-02 18:51:42 - __main__ - INFO: 图像 8 - 独立位姿计算成功
+2025-12-02 18:51:42 - __main__ - INFO: 图像 9 - 独立位姿计算成功
+2025-12-02 18:51:42 - __main__ - INFO: 图像 10 - 独立位姿计算成功
+2025-12-02 18:51:42 - __main__ - INFO: 图像 11 - 独立位姿计算成功
+2025-12-02 18:51:42 - __main__ - INFO: 图像 12 - 独立位姿计算成功
+2025-12-02 18:51:42 - __main__ - INFO: 图像 13 - 独立位姿计算成功
+2025-12-02 18:51:42 - __main__ - INFO: 图像 14 - 独立位姿计算成功
+2025-12-02 18:51:42 - __main__ - INFO: 图像 15 - 独立位姿计算成功
+2025-12-02 18:51:42 - __main__ - INFO: 成功为 15 张图像计算独立位姿
+2025-12-02 18:51:42 - __main__ - INFO: 图像 1 - 旋转向量: [ 0.27096737 -0.24032158 -0.36960297]
+2025-12-02 18:51:42 - __main__ - INFO: 图像 1 - 平移向量: [-0.25574769 -0.0953512   0.36477166]
+2025-12-02 18:51:42 - __main__ - INFO: 图像 2 - 旋转向量: [ 0.49228063 -0.1016118  -0.20601561]
+2025-12-02 18:51:42 - __main__ - INFO: 图像 2 - 平移向量: [-0.18734893 -0.08869667  0.3707434 ]
+2025-12-02 18:51:42 - __main__ - INFO: 图像 3 - 旋转向量: [ 0.43536993 -0.22144296 -1.2034956 ]
+2025-12-02 18:51:42 - __main__ - INFO: 图像 3 - 平移向量: [-0.16032328  0.07736498  0.36114337]
+2025-12-02 18:51:42 - __main__ - INFO: 图像 4 - 旋转向量: [ 0.50019861  0.18495339 -1.81382816]
+2025-12-02 18:51:42 - __main__ - INFO: 图像 4 - 平移向量: [-0.03984227  0.02783881  0.4511308 ]
+2025-12-02 18:51:42 - __main__ - INFO: 图像 5 - 旋转向量: [ 0.13280884  0.64690236 -2.29010717]
+2025-12-02 18:51:42 - __main__ - INFO: 图像 5 - 平移向量: [0.12661597 0.04865292 0.46195251]
+2025-12-02 18:51:42 - __main__ - INFO: 图像 6 - 旋转向量: [-0.07400151  0.80455919 -2.50925031]
+2025-12-02 18:51:42 - __main__ - INFO: 图像 6 - 平移向量: [0.1277244  0.05961083 0.47435672]
+2025-12-02 18:51:42 - __main__ - INFO: 图像 7 - 旋转向量: [ 0.45840851  0.10118745 -0.84211127]
+2025-12-02 18:51:42 - __main__ - INFO: 图像 7 - 平移向量: [-0.20455537 -0.00409766  0.35969194]
+2025-12-02 18:51:42 - __main__ - INFO: 图像 8 - 旋转向量: [ 0.25108645  0.16727805 -0.04936474]
+2025-12-02 18:51:42 - __main__ - INFO: 图像 8 - 平移向量: [-0.18285272 -0.12847546  0.44632955]
+2025-12-02 18:51:42 - __main__ - INFO: 图像 9 - 旋转向量: [ 0.2567661  -0.49156626 -0.18048489]
+2025-12-02 18:51:42 - __main__ - INFO: 图像 9 - 平移向量: [-0.15443908 -0.04067696  0.33512005]
+2025-12-02 18:51:42 - __main__ - INFO: 图像 10 - 旋转向量: [-0.2894627   0.27911004 -0.10943613]
+2025-12-02 18:51:42 - __main__ - INFO: 图像 10 - 平移向量: [-0.12082034 -0.0558936   0.49514357]
+2025-12-02 18:51:42 - __main__ - INFO: 图像 11 - 旋转向量: [-0.26522725  0.49057211 -0.67395545]
+2025-12-02 18:51:42 - __main__ - INFO: 图像 11 - 平移向量: [-0.03582827  0.06667714  0.4472153 ]
+2025-12-02 18:51:42 - __main__ - INFO: 图像 12 - 旋转向量: [ 0.73815174  0.35029367 -1.6048064 ]
+2025-12-02 18:51:42 - __main__ - INFO: 图像 12 - 平移向量: [-0.12793746 -0.05097887  0.48570326]
+2025-12-02 18:51:42 - __main__ - INFO: 图像 13 - 旋转向量: [ 0.25617894  0.51996647 -1.2788091 ]
+2025-12-02 18:51:42 - __main__ - INFO: 图像 13 - 平移向量: [-0.03853653  0.1036987   0.45166216]
+2025-12-02 18:51:42 - __main__ - INFO: 图像 14 - 旋转向量: [ 0.37541499  0.17450542 -2.16280074]
+2025-12-02 18:51:42 - __main__ - INFO: 图像 14 - 平移向量: [0.01542058 0.08478285 0.44021213]
+2025-12-02 18:51:42 - __main__ - INFO: 图像 15 - 旋转向量: [-0.11885282 -0.30255223  0.26145327]
+2025-12-02 18:51:42 - __main__ - INFO: 图像 15 - 平移向量: [-0.14990844 -0.12289606  0.31063295]
+2025-12-02 18:51:42 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/annotated_images/annotated_1.jpg
+2025-12-02 18:51:42 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/annotated_images/annotated_2.jpg
+2025-12-02 18:51:42 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/annotated_images/annotated_3.jpg
+2025-12-02 18:51:42 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/annotated_images/annotated_4.jpg
+2025-12-02 18:51:42 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/annotated_images/annotated_5.jpg
+2025-12-02 18:51:42 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/annotated_images/annotated_6.jpg
+2025-12-02 18:51:43 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/annotated_images/annotated_7.jpg
+2025-12-02 18:51:43 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/annotated_images/annotated_8.jpg
+2025-12-02 18:51:43 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/annotated_images/annotated_9.jpg
+2025-12-02 18:51:43 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/annotated_images/annotated_10.jpg
+2025-12-02 18:51:43 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/annotated_images/annotated_11.jpg
+2025-12-02 18:51:43 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/annotated_images/annotated_12.jpg
+2025-12-02 18:51:43 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/annotated_images/annotated_13.jpg
+2025-12-02 18:51:43 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/annotated_images/annotated_14.jpg
+2025-12-02 18:51:43 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/annotated_images/annotated_15.jpg
+2025-12-02 18:53:32 - __main__ - INFO: current_path： /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data
+2025-12-02 18:53:32 - __main__ - INFO: images_path :/home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201
+2025-12-02 18:53:32 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/1.jpg
+2025-12-02 18:53:32 - __main__ - INFO: 图像 1 检测到棋盘格角点
+2025-12-02 18:53:32 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/2.jpg
+2025-12-02 18:53:32 - __main__ - INFO: 图像 2 检测到棋盘格角点
+2025-12-02 18:53:32 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/3.jpg
+2025-12-02 18:53:32 - __main__ - INFO: 图像 3 检测到棋盘格角点
+2025-12-02 18:53:32 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/4.jpg
+2025-12-02 18:53:32 - __main__ - INFO: 图像 4 检测到棋盘格角点
+2025-12-02 18:53:32 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/5.jpg
+2025-12-02 18:53:32 - __main__ - INFO: 图像 5 检测到棋盘格角点
+2025-12-02 18:53:32 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/6.jpg
+2025-12-02 18:53:32 - __main__ - INFO: 图像 6 检测到棋盘格角点
+2025-12-02 18:53:32 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/7.jpg
+2025-12-02 18:53:32 - __main__ - INFO: 图像 7 检测到棋盘格角点
+2025-12-02 18:53:32 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/8.jpg
+2025-12-02 18:53:32 - __main__ - INFO: 图像 8 检测到棋盘格角点
+2025-12-02 18:53:32 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/9.jpg
+2025-12-02 18:53:32 - __main__ - INFO: 图像 9 检测到棋盘格角点
+2025-12-02 18:53:32 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/10.jpg
+2025-12-02 18:53:32 - __main__ - INFO: 图像 10 检测到棋盘格角点
+2025-12-02 18:53:32 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/11.jpg
+2025-12-02 18:53:32 - __main__ - INFO: 图像 11 检测到棋盘格角点
+2025-12-02 18:53:32 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/12.jpg
+2025-12-02 18:53:32 - __main__ - INFO: 图像 12 检测到棋盘格角点
+2025-12-02 18:53:32 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/13.jpg
+2025-12-02 18:53:32 - __main__ - INFO: 图像 13 检测到棋盘格角点
+2025-12-02 18:53:32 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/14.jpg
+2025-12-02 18:53:32 - __main__ - INFO: 图像 14 检测到棋盘格角点
+2025-12-02 18:53:32 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/15.jpg
+2025-12-02 18:53:32 - __main__ - INFO: 图像 15 检测到棋盘格角点
+2025-12-02 18:53:32 - __main__ - INFO: 总共15 张图片中, 15张检测到棋盘格角点
+2025-12-02 18:53:32 - __main__ - INFO: 内参矩阵:
+:[[647.9011397    0.         656.35882857]
+ [  0.         647.85700588 364.15301662]
+ [  0.           0.           1.        ]]
+2025-12-02 18:53:32 - __main__ - INFO: 畸变系数:
+:[[-0.05323749  0.06645562  0.00070235  0.00121296 -0.02285516]]
+2025-12-02 18:53:32 - __main__ - INFO: 标定板相对相机的旋转矩阵:
+:(array([[ 0.27096737],
+       [-0.24032158],
+       [-0.36960297]]), array([[ 0.49228063],
+       [-0.1016118 ],
+       [-0.20601561]]), array([[ 0.43536993],
+       [-0.22144296],
+       [-1.2034956 ]]), array([[ 0.50019861],
+       [ 0.18495339],
+       [-1.81382816]]), array([[ 0.13280884],
+       [ 0.64690236],
+       [-2.29010717]]), array([[-0.07400151],
+       [ 0.80455919],
+       [-2.50925031]]), array([[ 0.45840851],
+       [ 0.10118745],
+       [-0.84211127]]), array([[ 0.25108645],
+       [ 0.16727805],
+       [-0.04936474]]), array([[ 0.2567661 ],
+       [-0.49156626],
+       [-0.18048489]]), array([[-0.2894627 ],
+       [ 0.27911004],
+       [-0.10943613]]), array([[-0.26522725],
+       [ 0.49057211],
+       [-0.67395545]]), array([[ 0.73815174],
+       [ 0.35029367],
+       [-1.6048064 ]]), array([[ 0.25617894],
+       [ 0.51996647],
+       [-1.2788091 ]]), array([[ 0.37541499],
+       [ 0.17450542],
+       [-2.16280074]]), array([[-0.11885282],
+       [-0.30255223],
+       [ 0.26145327]]))
+2025-12-02 18:53:32 - __main__ - INFO: 标定板相对相机的平移向量:
+:(array([[-0.25574769],
+       [-0.0953512 ],
+       [ 0.36477166]]), array([[-0.18734893],
+       [-0.08869667],
+       [ 0.3707434 ]]), array([[-0.16032328],
+       [ 0.07736498],
+       [ 0.36114337]]), array([[-0.03984227],
+       [ 0.02783881],
+       [ 0.4511308 ]]), array([[0.12661597],
+       [0.04865292],
+       [0.46195251]]), array([[0.1277244 ],
+       [0.05961083],
+       [0.47435672]]), array([[-0.20455537],
+       [-0.00409766],
+       [ 0.35969194]]), array([[-0.18285272],
+       [-0.12847546],
+       [ 0.44632955]]), array([[-0.15443908],
+       [-0.04067696],
+       [ 0.33512005]]), array([[-0.12082034],
+       [-0.0558936 ],
+       [ 0.49514357]]), array([[-0.03582827],
+       [ 0.06667714],
+       [ 0.4472153 ]]), array([[-0.12793746],
+       [-0.05097887],
+       [ 0.48570326]]), array([[-0.03853653],
+       [ 0.1036987 ],
+       [ 0.45166216]]), array([[0.01542058],
+       [0.08478285],
+       [0.44021213]]), array([[-0.14990844],
+       [-0.12289606],
+       [ 0.31063295]]))
+2025-12-02 18:53:32 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/annotated_images/annotated_1.jpg
+2025-12-02 18:53:32 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/annotated_images/annotated_2.jpg
+2025-12-02 18:53:33 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/annotated_images/annotated_3.jpg
+2025-12-02 18:53:33 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/annotated_images/annotated_4.jpg
+2025-12-02 18:53:33 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/annotated_images/annotated_5.jpg
+2025-12-02 18:53:33 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/annotated_images/annotated_6.jpg
+2025-12-02 18:53:33 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/annotated_images/annotated_7.jpg
+2025-12-02 18:53:33 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/annotated_images/annotated_8.jpg
+2025-12-02 18:53:33 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/annotated_images/annotated_9.jpg
+2025-12-02 18:53:33 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/annotated_images/annotated_10.jpg
+2025-12-02 18:53:33 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/annotated_images/annotated_11.jpg
+2025-12-02 18:53:33 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/annotated_images/annotated_12.jpg
+2025-12-02 18:53:33 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/annotated_images/annotated_13.jpg
+2025-12-02 18:53:33 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/annotated_images/annotated_14.jpg
+2025-12-02 18:53:33 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/annotated_images/annotated_15.jpg
+2025-12-02 18:53:33 - __main__ - INFO: 末端对基座的平移向量:
+:[array([-0.34027689, -0.39206899, -0.63223961]), array([-0.38176438, -0.48993689, -0.46482761]), array([-0.06543855, -0.6578465 , -0.49821929]), array([-0.13063658, -0.67741784, -0.02992906]), array([-0.4567034 , -0.49504144, -0.01640095]), array([-0.49029489, -0.45859117, -0.04607554]), array([-0.29191788, -0.68132142, -0.34164854]), array([-0.54783965, -0.37151502, -0.26991822]), array([-0.42075749, -0.20891742, -0.67633494]), array([-0.68483735,  0.01497266, -0.19030664]), array([-0.73817227, -0.05625485, -0.21173357]), array([-0.02185788, -0.65388056,  0.12226263]), array([-0.52639572, -0.52068314, -0.12977351]), array([-0.15239879, -0.69738266, -0.03183611]), array([-0.72130959, -0.00961702, -0.43112607])]
+2025-12-02 18:53:58 - __main__ - INFO: current_path： /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data
+2025-12-02 18:53:58 - __main__ - INFO: images_path :/home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201
+2025-12-02 18:53:58 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/1.jpg
+2025-12-02 18:53:58 - __main__ - INFO: 图像 1 检测到棋盘格角点
+2025-12-02 18:53:58 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/2.jpg
+2025-12-02 18:53:58 - __main__ - INFO: 图像 2 检测到棋盘格角点
+2025-12-02 18:53:58 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/3.jpg
+2025-12-02 18:53:58 - __main__ - INFO: 图像 3 检测到棋盘格角点
+2025-12-02 18:53:58 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/4.jpg
+2025-12-02 18:53:58 - __main__ - INFO: 图像 4 检测到棋盘格角点
+2025-12-02 18:53:58 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/5.jpg
+2025-12-02 18:53:58 - __main__ - INFO: 图像 5 检测到棋盘格角点
+2025-12-02 18:53:58 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/6.jpg
+2025-12-02 18:53:58 - __main__ - INFO: 图像 6 检测到棋盘格角点
+2025-12-02 18:53:58 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/7.jpg
+2025-12-02 18:53:58 - __main__ - INFO: 图像 7 检测到棋盘格角点
+2025-12-02 18:53:58 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/8.jpg
+2025-12-02 18:53:58 - __main__ - INFO: 图像 8 检测到棋盘格角点
+2025-12-02 18:53:58 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/9.jpg
+2025-12-02 18:53:58 - __main__ - INFO: 图像 9 检测到棋盘格角点
+2025-12-02 18:53:58 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/10.jpg
+2025-12-02 18:53:58 - __main__ - INFO: 图像 10 检测到棋盘格角点
+2025-12-02 18:53:58 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/11.jpg
+2025-12-02 18:53:58 - __main__ - INFO: 图像 11 检测到棋盘格角点
+2025-12-02 18:53:58 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/12.jpg
+2025-12-02 18:53:58 - __main__ - INFO: 图像 12 检测到棋盘格角点
+2025-12-02 18:53:58 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/13.jpg
+2025-12-02 18:53:58 - __main__ - INFO: 图像 13 检测到棋盘格角点
+2025-12-02 18:53:58 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/14.jpg
+2025-12-02 18:53:58 - __main__ - INFO: 图像 14 检测到棋盘格角点
+2025-12-02 18:53:58 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/15.jpg
+2025-12-02 18:53:58 - __main__ - INFO: 图像 15 检测到棋盘格角点
+2025-12-02 18:53:58 - __main__ - INFO: 总共15 张图片中, 15张检测到棋盘格角点
+2025-12-02 18:53:58 - __main__ - INFO: 内参矩阵:
+:[[647.9011397    0.         656.35882857]
+ [  0.         647.85700588 364.15301662]
+ [  0.           0.           1.        ]]
+2025-12-02 18:53:58 - __main__ - INFO: 畸变系数:
+:[[-0.05323749  0.06645562  0.00070235  0.00121296 -0.02285516]]
+2025-12-02 18:53:58 - __main__ - INFO: 标定板相对相机的旋转矩阵:
+:(array([[ 0.27096737],
+       [-0.24032158],
+       [-0.36960297]]), array([[ 0.49228063],
+       [-0.1016118 ],
+       [-0.20601561]]), array([[ 0.43536993],
+       [-0.22144296],
+       [-1.2034956 ]]), array([[ 0.50019861],
+       [ 0.18495339],
+       [-1.81382816]]), array([[ 0.13280884],
+       [ 0.64690236],
+       [-2.29010717]]), array([[-0.07400151],
+       [ 0.80455919],
+       [-2.50925031]]), array([[ 0.45840851],
+       [ 0.10118745],
+       [-0.84211127]]), array([[ 0.25108645],
+       [ 0.16727805],
+       [-0.04936474]]), array([[ 0.2567661 ],
+       [-0.49156626],
+       [-0.18048489]]), array([[-0.2894627 ],
+       [ 0.27911004],
+       [-0.10943613]]), array([[-0.26522725],
+       [ 0.49057211],
+       [-0.67395545]]), array([[ 0.73815174],
+       [ 0.35029367],
+       [-1.6048064 ]]), array([[ 0.25617894],
+       [ 0.51996647],
+       [-1.2788091 ]]), array([[ 0.37541499],
+       [ 0.17450542],
+       [-2.16280074]]), array([[-0.11885282],
+       [-0.30255223],
+       [ 0.26145327]]))
+2025-12-02 18:53:58 - __main__ - INFO: 标定板相对相机的平移向量:
+:(array([[-0.25574769],
+       [-0.0953512 ],
+       [ 0.36477166]]), array([[-0.18734893],
+       [-0.08869667],
+       [ 0.3707434 ]]), array([[-0.16032328],
+       [ 0.07736498],
+       [ 0.36114337]]), array([[-0.03984227],
+       [ 0.02783881],
+       [ 0.4511308 ]]), array([[0.12661597],
+       [0.04865292],
+       [0.46195251]]), array([[0.1277244 ],
+       [0.05961083],
+       [0.47435672]]), array([[-0.20455537],
+       [-0.00409766],
+       [ 0.35969194]]), array([[-0.18285272],
+       [-0.12847546],
+       [ 0.44632955]]), array([[-0.15443908],
+       [-0.04067696],
+       [ 0.33512005]]), array([[-0.12082034],
+       [-0.0558936 ],
+       [ 0.49514357]]), array([[-0.03582827],
+       [ 0.06667714],
+       [ 0.4472153 ]]), array([[-0.12793746],
+       [-0.05097887],
+       [ 0.48570326]]), array([[-0.03853653],
+       [ 0.1036987 ],
+       [ 0.45166216]]), array([[0.01542058],
+       [0.08478285],
+       [0.44021213]]), array([[-0.14990844],
+       [-0.12289606],
+       [ 0.31063295]]))
+2025-12-02 18:53:58 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/annotated_images/annotated_1.jpg
+2025-12-02 18:53:58 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/annotated_images/annotated_2.jpg
+2025-12-02 18:53:58 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/annotated_images/annotated_3.jpg
+2025-12-02 18:53:58 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/annotated_images/annotated_4.jpg
+2025-12-02 18:53:58 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/annotated_images/annotated_5.jpg
+2025-12-02 18:53:58 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/annotated_images/annotated_6.jpg
+2025-12-02 18:53:58 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/annotated_images/annotated_7.jpg
+2025-12-02 18:53:58 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/annotated_images/annotated_8.jpg
+2025-12-02 18:53:58 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/annotated_images/annotated_9.jpg
+2025-12-02 18:53:58 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/annotated_images/annotated_10.jpg
+2025-12-02 18:53:58 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/annotated_images/annotated_11.jpg
+2025-12-02 18:53:58 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/annotated_images/annotated_12.jpg
+2025-12-02 18:53:58 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/annotated_images/annotated_13.jpg
+2025-12-02 18:53:58 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/annotated_images/annotated_14.jpg
+2025-12-02 18:53:58 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120201/annotated_images/annotated_15.jpg
+2025-12-02 18:53:58 - __main__ - INFO: 末端对基座的平移向量:
+:[array([-0.34027689, -0.39206899, -0.63223961]), array([-0.38176438, -0.48993689, -0.46482761]), array([-0.06543855, -0.6578465 , -0.49821929]), array([-0.13063658, -0.67741784, -0.02992906]), array([-0.4567034 , -0.49504144, -0.01640095]), array([-0.49029489, -0.45859117, -0.04607554]), array([-0.29191788, -0.68132142, -0.34164854]), array([-0.54783965, -0.37151502, -0.26991822]), array([-0.42075749, -0.20891742, -0.67633494]), array([-0.68483735,  0.01497266, -0.19030664]), array([-0.73817227, -0.05625485, -0.21173357]), array([-0.02185788, -0.65388056,  0.12226263]), array([-0.52639572, -0.52068314, -0.12977351]), array([-0.15239879, -0.69738266, -0.03183611]), array([-0.72130959, -0.00961702, -0.43112607])]
+2025-12-02 18:53:58 - __main__ - INFO: 旋转矩阵是:
+ [[ 0.99994232 -0.01070048  0.00092739]
+ [-0.00875255 -0.76176901  0.6477896 ]
+ [-0.0062252  -0.64776035 -0.76181873]]
+2025-12-02 18:53:58 - __main__ - INFO: 平移向量是:
+ [[-0.222866  ]
+ [-0.94968002]
+ [ 0.546829  ]]
+2025-12-02 18:53:58 - __main__ - INFO: 四元数是：
+ [ 0.93855342 -0.00518165 -0.00141116 -0.34509223]
+2025-12-02 19:35:14 - libs.auxiliary - INFO: create folder /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120202
+2025-12-02 19:35:24 - __main__ - INFO: 开始手眼标定程序，当前程序版号V1.0.0
+2025-12-02 19:36:20 - __main__ - INFO: 获取状态：成功，当前位姿为[-0.21825209, -0.573906124, 0.178657176, 2.712158771913011, -0.2629855135588048, -0.6790695114134225]
+2025-12-02 19:36:20 - __main__ - INFO: ===采集第1次数据！
+2025-12-02 19:36:26 - __main__ - INFO: 获取状态：成功，当前位姿为[-0.25085550900000003, -0.611888847, 0.20688761, 2.1761247522870555, -0.08495863118309689, -1.2272700467221054]
+2025-12-02 19:36:26 - __main__ - INFO: ===采集第2次数据！
+2025-12-02 19:36:30 - __main__ - INFO: 获取状态：成功，当前位姿为[-0.27125882100000004, -0.605968895, 0.268672126, 1.4294127716911498, -0.07704155589666282, -1.4160662389011491]
+2025-12-02 19:36:30 - __main__ - INFO: ===采集第3次数据！
+2025-12-02 19:36:35 - __main__ - INFO: 获取状态：成功，当前位姿为[-0.114229417, -0.6113771530000001, 0.147276013, 2.83679428714096, -0.0930747438174284, -0.7052596080095842]
+2025-12-02 19:36:35 - __main__ - INFO: ===采集第4次数据！
+2025-12-02 19:36:39 - __main__ - INFO: 获取状态：成功，当前位姿为[0.036786816, -0.6014324390000001, 0.188463416, -2.635880500858123, -0.8201575299149291, -0.929645140578602]
+2025-12-02 19:36:39 - __main__ - INFO: ===采集第5次数据！
+2025-12-02 19:36:47 - __main__ - INFO: 获取状态：成功，当前位姿为[-0.374751402, -0.6763682649999999, 0.195984163, 1.4518846188488623, -0.08828583960263628, -1.5654582547309643]
+2025-12-02 19:36:47 - __main__ - INFO: ===采集第6次数据！
+2025-12-02 19:36:54 - __main__ - INFO: 获取状态：成功，当前位姿为[-0.288532217, -0.6795758439999999, 0.282687525, 0.8415431190527858, 0.2502324974342373, -1.8083397046084817]
+2025-12-02 19:36:54 - __main__ - INFO: ===采集第7次数据！
+2025-12-02 19:36:59 - __main__ - INFO: 获取状态：成功，当前位姿为[-0.202175219, -0.7161016889999999, 0.211145745, 2.5247060469256897, -0.3570954470621761, -0.04086951988261774]
+2025-12-02 19:36:59 - __main__ - INFO: ===采集第8次数据！
+2025-12-02 19:37:14 - __main__ - INFO: 获取状态：成功，当前位姿为[-0.280389398, -0.7715091310000001, 0.22950051400000002, 2.256948907911688, -0.05532149186095402, -0.7792046705605287]
+2025-12-02 19:37:14 - __main__ - INFO: ===采集第9次数据！
+2025-12-02 19:37:19 - __main__ - INFO: 获取状态：成功，当前位姿为[-0.174720705, -0.722984795, 0.261432442, 2.649021154609558, -0.38492339553499416, -0.4525971759242577]
+2025-12-02 19:37:19 - __main__ - INFO: ===采集第10次数据！
+2025-12-02 19:37:23 - __main__ - INFO: 获取状态：成功，当前位姿为[-0.09210484499999999, -0.730984964, 0.198959956, 2.942679346242299, -0.9798916687603619, -0.35952875019872155]
+2025-12-02 19:37:23 - __main__ - INFO: ===采集第11次数据！
+2025-12-02 19:37:31 - __main__ - INFO: 获取状态：成功，当前位姿为[-0.33371554099999995, -0.6205299049999999, 0.285214747, 1.019079825708071, -0.23929453646528137, -1.7912013043921835]
+2025-12-02 19:37:31 - __main__ - INFO: ===采集第12次数据！
+2025-12-02 19:37:42 - __main__ - INFO: 获取状态：成功，当前位姿为[-0.300352503, -0.57474421, 0.305467975, 0.7146239452183569, -0.1084661916255282, -2.220313242635143]
+2025-12-02 19:37:42 - __main__ - INFO: ===采集第13次数据！
+2025-12-02 19:37:52 - __main__ - INFO: 获取状态：成功，当前位姿为[-0.024353795, -0.739082369, 0.231692692, -2.947477779954807, -0.6692975874644316, -0.9240213581161184]
+2025-12-02 19:37:52 - __main__ - INFO: ===采集第14次数据！
+2025-12-02 19:37:58 - __main__ - INFO: 获取状态：成功，当前位姿为[-0.055240678, -0.720758434, 0.263600116, -2.5540784896134756, -1.1192635748215527, -1.0074485850536379]
+2025-12-02 19:37:58 - __main__ - INFO: ===采集第15次数据！
+2025-12-02 19:38:15 - __main__ - INFO: 获取状态：成功，当前位姿为[-0.151100047, -0.7874430640000001, 0.235351752, 2.5878531588202733, -0.29777521389868533, -0.4609338458161637]
+2025-12-02 19:38:15 - __main__ - INFO: ===采集第16次数据！
+2025-12-02 19:39:01 - __main__ - INFO: current_path： /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data
+2025-12-02 19:39:01 - __main__ - INFO: images_path :/home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120202
+2025-12-02 19:39:01 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120202/1.jpg
+2025-12-02 19:39:01 - __main__ - INFO: 图像 1 检测到棋盘格角点
+2025-12-02 19:39:01 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120202/2.jpg
+2025-12-02 19:39:01 - __main__ - INFO: 图像 2 检测到棋盘格角点
+2025-12-02 19:39:01 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120202/3.jpg
+2025-12-02 19:39:01 - __main__ - INFO: 图像 3 检测到棋盘格角点
+2025-12-02 19:39:01 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120202/4.jpg
+2025-12-02 19:39:01 - __main__ - INFO: 图像 4 检测到棋盘格角点
+2025-12-02 19:39:01 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120202/5.jpg
+2025-12-02 19:39:01 - __main__ - INFO: 图像 5 检测到棋盘格角点
+2025-12-02 19:39:01 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120202/6.jpg
+2025-12-02 19:39:01 - __main__ - INFO: 图像 6 检测到棋盘格角点
+2025-12-02 19:39:01 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120202/7.jpg
+2025-12-02 19:39:01 - __main__ - INFO: 图像 7 检测到棋盘格角点
+2025-12-02 19:39:01 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120202/8.jpg
+2025-12-02 19:39:01 - __main__ - INFO: 图像 8 检测到棋盘格角点
+2025-12-02 19:39:01 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120202/9.jpg
+2025-12-02 19:39:01 - __main__ - INFO: 图像 9 检测到棋盘格角点
+2025-12-02 19:39:01 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120202/10.jpg
+2025-12-02 19:39:01 - __main__ - INFO: 图像 10 检测到棋盘格角点
+2025-12-02 19:39:01 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120202/11.jpg
+2025-12-02 19:39:02 - __main__ - INFO: 图像 11 检测到棋盘格角点
+2025-12-02 19:39:02 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120202/12.jpg
+2025-12-02 19:39:02 - __main__ - INFO: 图像 12 检测到棋盘格角点
+2025-12-02 19:39:02 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120202/13.jpg
+2025-12-02 19:39:02 - __main__ - INFO: 图像 13 检测到棋盘格角点
+2025-12-02 19:39:02 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120202/14.jpg
+2025-12-02 19:39:02 - __main__ - INFO: 图像 14 检测到棋盘格角点
+2025-12-02 19:39:02 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120202/15.jpg
+2025-12-02 19:39:02 - __main__ - INFO: 图像 15 检测到棋盘格角点
+2025-12-02 19:39:02 - __main__ - INFO: 读 /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120202/16.jpg
+2025-12-02 19:39:02 - __main__ - INFO: 图像 16 检测到棋盘格角点
+2025-12-02 19:39:02 - __main__ - INFO: 总共16 张图片中, 16张检测到棋盘格角点
+2025-12-02 19:39:02 - __main__ - INFO: 内参矩阵:
+:[[636.64102874   0.         645.87093683]
+ [  0.         637.28523288 358.66934294]
+ [  0.           0.           1.        ]]
+2025-12-02 19:39:02 - __main__ - INFO: 畸变系数:
+:[[-0.06883659  0.09069593 -0.00116802 -0.00314408 -0.04680663]]
+2025-12-02 19:39:02 - __main__ - INFO: 标定板相对相机的旋转矩阵:
+:(array([[ 0.31669025],
+       [ 0.23794608],
+       [-1.40479849]]), array([[ 0.05842634],
+       [ 0.2181313 ],
+       [-0.6008857 ]]), array([[-0.06914662],
+       [-0.18844712],
+       [ 0.0542683 ]]), array([[ 0.49733765],
+       [ 0.35572321],
+       [-1.34295604]]), array([[ 0.17477389],
+       [ 0.75359311],
+       [-2.26216287]]), array([[-0.06539549],
+       [-0.08794633],
+       [ 0.15137561]]), array([[ 0.3407584 ],
+       [-0.44612148],
+       [ 0.63208537]]), array([[ 0.453243  ],
+       [-0.28966524],
+       [-1.77254609]]), array([[ 0.25044839],
+       [-0.03753732],
+       [-0.96732285]]), array([[ 0.31539412],
+       [ 0.04934382],
+       [-1.60542092]]), array([[ 0.06623962],
+       [ 0.17627121],
+       [-2.26210795]]), array([[-0.14134329],
+       [-0.23350112],
+       [ 0.65815614]]), array([[ 0.21961862],
+       [-0.21041829],
+       [ 1.130357  ]]), array([[ 0.12168184],
+       [ 0.65843659],
+       [-1.94885579]]), array([[-0.05830682],
+       [ 0.5628221 ],
+       [-2.49476277]]), array([[ 0.3394018 ],
+       [ 0.00949676],
+       [-1.5053339 ]]))
+2025-12-02 19:39:02 - __main__ - INFO: 标定板相对相机的平移向量:
+:(array([[-0.21010958],
+       [-0.01156462],
+       [ 0.48683394]]), array([[-0.2375054 ],
+       [-0.07509316],
+       [ 0.44256636]]), array([[-0.20178468],
+       [-0.15862544],
+       [ 0.39285228]]), array([[-0.10589099],
+       [ 0.03958695],
+       [ 0.49047002]]), array([[0.09059886],
+       [0.05378667],
+       [0.50587153]]), array([[-0.30089706],
+       [-0.05891121],
+       [ 0.40495667]]), array([[-0.16237686],
+       [-0.08814442],
+       [ 0.31132967]]), array([[-0.15863999],
+       [ 0.09410473],
+       [ 0.33943698]]), array([[-0.2666639 ],
+       [ 0.06424339],
+       [ 0.30088051]]), array([[-0.15643298],
+       [ 0.05828526],
+       [ 0.31866126]]), array([[-0.04432818],
+       [ 0.13974815],
+       [ 0.3752468 ]]), array([[-0.21382271],
+       [-0.15765408],
+       [ 0.38307035]]), array([[-0.15238588],
+       [-0.17229789],
+       [ 0.37333618]]), array([[0.003218  ],
+       [0.1138601 ],
+       [0.38055911]]), array([[0.01044808],
+       [0.10048753],
+       [0.35918887]]), array([[-0.13379385],
+       [ 0.11690609],
+       [ 0.292191  ]]))
+2025-12-02 19:39:02 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120202/annotated_images/annotated_1.jpg
+2025-12-02 19:39:02 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120202/annotated_images/annotated_2.jpg
+2025-12-02 19:39:02 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120202/annotated_images/annotated_3.jpg
+2025-12-02 19:39:02 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120202/annotated_images/annotated_4.jpg
+2025-12-02 19:39:02 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120202/annotated_images/annotated_5.jpg
+2025-12-02 19:39:02 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120202/annotated_images/annotated_6.jpg
+2025-12-02 19:39:02 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120202/annotated_images/annotated_7.jpg
+2025-12-02 19:39:02 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120202/annotated_images/annotated_8.jpg
+2025-12-02 19:39:02 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120202/annotated_images/annotated_9.jpg
+2025-12-02 19:39:02 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120202/annotated_images/annotated_10.jpg
+2025-12-02 19:39:02 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120202/annotated_images/annotated_11.jpg
+2025-12-02 19:39:02 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120202/annotated_images/annotated_12.jpg
+2025-12-02 19:39:02 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120202/annotated_images/annotated_13.jpg
+2025-12-02 19:39:02 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120202/annotated_images/annotated_14.jpg
+2025-12-02 19:39:02 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120202/annotated_images/annotated_15.jpg
+2025-12-02 19:39:02 - __main__ - INFO: 已保存标注图像: /home/zsl/lzk/project_11.19/Modules/hand_eye_calibration-main/eye_hand_data/data2025120202/annotated_images/annotated_16.jpg
+2025-12-02 19:39:02 - __main__ - INFO: 末端对基座的平移向量:
+:[array([-0.23050901, -0.58186616, -0.13121726]), array([-0.50742989, -0.38688316, -0.27013934]), array([-0.57595134, -0.17183928, -0.38950697]), array([-0.32168372, -0.55008426, -0.04947219]), array([-0.48159285, -0.40517107, -0.04997438]), array([-0.68901195, -0.08991813, -0.39179038]), array([-0.63570137, -0.25842349, -0.39253977]), array([ 0.08804328, -0.73973695, -0.20807834]), array([-0.35482633, -0.63523382, -0.44394967]), array([-0.24556214, -0.72656272, -0.18272139]), array([-0.26047259, -0.69636971, -0.17213552]), array([-0.72674508,  0.00055328, -0.22273788]), array([-0.66867691, -0.23553736, -0.10604978]), array([-0.59480431, -0.48986973, -0.08217565]), array([-0.49021046, -0.58468887, -0.09930713]), array([-0.27450463, -0.74219551, -0.26847958])]
+2025-12-02 19:39:02 - __main__ - INFO: 旋转矩阵是:
+ [[ 0.99998847 -0.00402241 -0.0026214 ]
+ [-0.00131565 -0.75466289  0.65611142]
+ [-0.00461742 -0.65610041 -0.75465948]]
+2025-12-02 19:39:02 - __main__ - INFO: 平移向量是:
+ [[-0.08589878]
+ [-0.94685233]
+ [ 0.54232084]]
+2025-12-02 19:39:02 - __main__ - INFO: 四元数是：
+ [ 0.93665773 -0.00142476 -0.00193209 -0.35023781]
