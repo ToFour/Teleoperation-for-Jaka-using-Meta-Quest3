@@ -322,9 +322,10 @@ class OculusVRServer:
                     self._robot.set_gripper_params(position=1000, force=30, speed=50,block=1)
                     self._robot.robot.set_tool_id(1)
                     self._robot.set_tool_data(140) 
-                    self._robot.robot.servo_move_enable(True)
                     target_pos= [355, -122, 356, radians(180.0), radians(0.0), radians(145.0)]
                     self._robot.move_linear_extend(target_pos,_speed=200,_accel=100,TOL= 0.1,_is_block=True,_move_mode=0)
+                    self._robot.robot.servo_move_enable(True)
+                    
                     # self._robot.start_heartbeat(0.02)
                     print("✅ Connected to robot ")
                 
