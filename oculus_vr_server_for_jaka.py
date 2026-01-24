@@ -215,6 +215,9 @@ class OculusVRServer:
         self._robot_initpos = SAFE_POSITION
         self._robot_lastgripperState=GRIPPER_OPEN
         self._robot_gripper_count = 0
+        
+        
+        
         # DROID VRPolicy exact parameters - no customization
         self.max_lin_vel = 1.0
         self.max_rot_vel = 1.0
@@ -235,6 +238,7 @@ class OculusVRServer:
         # Coordinate transformation
         # Default: DROID exact from oculus_controller.py: rmat_reorder: list = [-2, -1, -3, 4]
         # But this might not be correct for all robot setups
+        #左右手柄可能不一样
         if coord_transform is None:
             # Try a more standard transformation that should work for most robots
             # This maps: VR +Z (forward) → Robot +X (forward)
@@ -310,6 +314,8 @@ class OculusVRServer:
             print(f"❌ Failed to initialize Oculus Reader: {e}")
             sys.exit(1)
 
+        
+        #这里换成封装的初始化函数
         if not self.debug:
             print("🤖 Connecting to robot...")
             try:
@@ -447,6 +453,7 @@ class OculusVRServer:
         
         # Performance tuning parameters (can be adjusted for responsiveness)
         self.enable_performance_mode = performance_mode  # Enable performance optimizations
+        
         if self.enable_performance_mode:
             # Increase control frequency for tighter tracking
             self.control_hz = CONTROL_FREQ * 2  # Double the frequency for faster response
@@ -471,13 +478,16 @@ class OculusVRServer:
             print(f"   Tighter tracking for better translation following")
         self.output_deadzone = 0.003
         self.output_euler_deadzone = radians(5)
+        
         # Translation tracking improvements
+        #vr数据的处理
         self.translation_deadzone = 0.005  # 0.5mm deadzone to filter noise
         self.use_position_filter = True  # Filter out noise in position tracking
         self.position_filter_alpha = 0.9  # Higher = more responsive, lower = more smooth
         self._last_vr_pos = None  # For position filtering
         
         # Additional DROID IK solver parameters for enhanced control
+        #可能没用？
         self.relative_max_joint_delta = np.array([0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2])
         self.max_joint_delta = self.relative_max_joint_delta.max()
         self.nullspace_gain = 0.025  # Gain for nullspace control (joint centering)
@@ -516,6 +526,7 @@ class OculusVRServer:
         
     def reset_state(self):
         """Reset internal state - matches DROID exactly"""
+        #同时运行两个手柄可能要有两个状态量
         self._state = {
             "poses": {},
             "buttons": {"A": False, "B": False, "X": False, "Y": False},
@@ -532,6 +543,7 @@ class OculusVRServer:
         self.vr_state = None
         
         # Robot state - Deoxys uses quaternions directly
+        #用于recorder的全局状态量，要改
         self.robot_pos = None
         self.robot_quat = None
         self.robot_euler = None
@@ -1068,7 +1080,7 @@ class OculusVRServer:
        
         return robot_pos,robot_euler,robot_joint
     
-    def velocity_to_position_target(self, velocity_action, current_pos, current_quat, action_info=None):
+    def  velocity_to_position_target(self, velocity_action, current_pos, current_quat, action_info=None):
         """Convert velocity action to position target for deoxys control
         
         This implements DROID-style velocity-to-delta conversion:
