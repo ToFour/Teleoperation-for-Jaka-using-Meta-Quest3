@@ -1,0 +1,47 @@
+manufacturer: Intel RealSense
+cameras:
+  realsense_0:
+    enabled: true
+    type: realsense
+    serial_number: '203522250888'
+    port_offset: 0
+    config:
+      width: 640
+      height: 480
+      fps: 30
+      enable_depth: true
+      depth_processing_preset: null
+      align_depth_to_color: null
+    description: 'Intel RealSense D455 (Serial: 203522250888)'
+    usb_port_info: 2-4.2
+  realsense_1:
+    enabled: true
+    type: realsense
+    serial_number: '944122074119'
+    port_offset: 1
+    config:
+      width: 640
+      height: 480
+      fps: 30
+      enable_depth: true
+      depth_processing_preset: null
+      align_depth_to_color: null
+    description: 'Intel RealSense D435I (Serial: 944122074119)'
+    usb_port_info: 2-4.4
+camera_settings:
+  jpeg_quality: 90
+  depth_encoding: 16UC1
+  depth_scale: 0.001
+  enable_threading: true
+  buffer_size: 5
+  enable_sync: false
+  sync_tolerance_ms: 10
+  realsense_defaults:
+    depth_processing_preset: 1
+    align_depth_to_color: true
+    decimation_filter: 2
+    spatial_filter: true
+    temporal_filter: true
+    hole_filling_filter: 1
+    enable_auto_exposure: true
+    auto_exposure_priority: false

@@ -453,7 +453,7 @@ class OculusVRServer:
             
             # Increase gains for more aggressive tracking
             #kp
-            self.pos_action_gain = 15.0  # Even higher for tighter translation
+            self.pos_action_gain = 18.0  # Even higher for tighter translation
             self.rot_action_gain = 1.5# Increased from 2.0
             
             # Adjust max deltas for higher frequency
@@ -461,7 +461,7 @@ class OculusVRServer:
             # but achieve the same or better overall speed
             #调整每个cycle 的delta大小
             
-            self.max_lin_delta = 0.003  # Maximum linear movement per control cycle
+            self.max_lin_delta = 0.005 # Maximum linear movement per control cycle
             self.max_rot_delta =0.008 
             print("\n⚡ PERFORMANCE MODE ENABLED:")
             print(f"   Control frequency: {self.control_hz}Hz (2x faster)")
@@ -1895,26 +1895,27 @@ Polymetis (euler angle-based). The rotation handling has been adjusted according
     #     sys.exit(0)
     
     # Handle auto-discovery of cameras
-    if args.auto_discover_cameras:
-        print("🔍 Auto-discovering cameras...")
-        try:
-            from Modules.camera_utils import discover_all_cameras, generate_camera_config
+    # if args.auto_discover_cameras:
+    # if True:
+    #     print("🔍 Auto-discovering cameras...")
+    #     try:
+    #         from Modules.camera_utils import discover_all_cameras, generate_camera_config
             
-            cameras = discover_all_cameras()
-            if cameras:
-                # Generate temporary config
-                temp_config = "/tmp/cameras_autodiscovered.yaml"
-                generate_camera_config(cameras, temp_config)
+    #         cameras = discover_all_cameras()
+    #         if cameras:
+    #             # Generate temporary config
+    #             temp_config = "/tmp/cameras_autodiscovered.yaml"
+    #             generate_camera_config(cameras, temp_config)
                 
-                # Override camera config path
-                args.camera_config = temp_config
-                args.enable_cameras = True
+    #             # Override camera config path
+    #             args.camera_config = temp_config
+    #             args.enable_cameras = True
                 
-                print(f"✅ Using auto-discovered cameras from: {temp_config}")
-            else:
-                print("⚠️  No cameras found during auto-discovery")
-        except Exception as e:
-            print(f"❌ Camera auto-discovery failed: {e}")
+    #             print(f"✅ Using auto-discovered cameras from: {temp_config}")
+    #         else:
+    #             print("⚠️  No cameras found during auto-discovery")
+    #     except Exception as e:
+    #         print(f"❌ Camera auto-discovery failed: {e}")
     
     # Load camera configuration if provided
     camera_configs = None
@@ -1956,7 +1957,7 @@ Polymetis (euler angle-based). The rotation handling has been adjusted according
         enable_recording=not args.no_recording,
         
         verify_data=args.verify_data,
-        camera_config_path='config\camera.yaml',
+        camera_config_path='configs/cameras_intel.yaml',
         enable_cameras=True
     )
     try:

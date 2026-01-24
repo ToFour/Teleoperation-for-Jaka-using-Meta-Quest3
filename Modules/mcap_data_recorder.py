@@ -542,8 +542,8 @@ class MCAPDataRecorder:
     def _get_urdf(self):
             """Get the  URDF content - use modified URDF"""
             # Use the modified URDF
-            urdf_path = Path(__file__)/ "robot" / "jaka_s5.urdf"
-      
+            urdf_path = Path(__file__).parent / "robot" / "jaka_s5.urdf"
+
             if urdf_path.exists():
                 with open(urdf_path, 'r') as f:
                     urdf_content = f.read() #一次性返回读取整个文件的内容，并将其作为字符串返回
