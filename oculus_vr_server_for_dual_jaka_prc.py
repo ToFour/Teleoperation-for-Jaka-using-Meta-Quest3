@@ -1147,11 +1147,11 @@ class OculusVRServer:
                 print("   right Gripper released")
                 self._state["right_grip_released"] = True#下降沿置位，等待回调释放
             #夹爪扳机上升沿触发
-            if edge_events["left"]["trigger_toggled"] and self.debug==False:
+            if edge_events["left"]["trigger_toggled"] and self.debug==False and self._state["left_gripper_toggle_state"] == False:
                 self._state["left_gripper_toggle_state"] = True#上升沿置位，等待回调释放
                 self._robot_gripper_count_left+=1        
                 if self._robot_gripper_count_left>1: self._robot_gripper_count_left=0
-            if edge_events["right"]["trigger_toggled"] and self.debug==False:
+            if edge_events["right"]["trigger_toggled"] and self.debug==False and self._state["right_gripper_toggle_state"] == False:
                 self._state["right_gripper_toggle_state"] = True#下降沿置位，等待回调释放
                 self._robot_gripper_count_right+=1        
                 if self._robot_gripper_count_right>1: self._robot_gripper_count_right=0
@@ -1370,7 +1370,7 @@ class OculusVRServer:
         self._last_vr_pos = vr_pos.copy()
         
         # Handle rotation
-        if hasattr(self, 'vr_neutral_pose') and (self.vr_neutral_pose_left  is not None):
+        if hasattr(self, 'vr_neutral_pose') and (self.vr_neutral_pose_left  is not None) and (self.vr_neutral_pose_right  is not None):
             # Calculate relative rotation from neutral pose using quaternions
             neutral_rot_right = R.from_matrix(self.vr_neutral_pose_right[:3, :3])
             neutral_rot_left = R.from_matrix(self.vr_neutral_pose_left[:3, :3])
@@ -1532,41 +1532,7 @@ class OculusVRServer:
         print(f"   Euler Action1: [{euler_action[0]:.4f}, {euler_action[1]:.4f}, {euler_action[2]:.4f}]")
 
 
-        def compute_angle_increment(current_angles, reference_angles, is_radians=True):
-            """     
-            参数:
-                current_angles: 当前角度数组
-                reference_angles: 参考角度数组
-                is_radians: 是否为弧度制，True表示弧度，False表示角度
-                
-            返回:
-                增量角度数组
-            """
-            # 确保输入是NumPy数组
-            current = np.asarray(current_angles, dtype=np.float64)
-            reference = np.asarray(reference_angles, dtype=np.float64)
-            
-            if current.shape != reference.shape:
-                raise ValueError(f"角度数组形状不一致: {current.shape} vs {reference.shape}")
-            
-            # 计算原始增量
-            delta = current - reference
-            
-            if is_radians:
-                two_pi = 2 * math.pi
-                limit = math.pi
-            else:
-                two_pi = 360.0
-                limit = 180.0
-            
-            # 向量化调整到(-limit, limit]范围
-            # 使用mod运算更高效
-            delta = (delta + limit) % two_pi - limit
-            
-            # 处理边界情况：确保-limit被映射到-limit而不是limit
-            delta = np.where(delta <= -limit, delta + two_pi, delta)
-            
-            return delta
+      
 
 
 
@@ -2068,15 +2034,15 @@ class OculusVRServer:
                             info = {
                                 "success": vr_state.buttons.get("A", False) if self.controller_id == 'r' else vr_state.buttons.get("X", False),
                                 "failure": vr_state.buttons.get("B", False) if self.controller_id == 'r' else vr_state.buttons.get("Y", False),
-                                "movement_enabled": vr_state.movement_enabled,
+                                "movement_enabled": vr_state.left_movement_enabled or vr_state.right_movement_enabled,
                                 "controller_on": vr_state.controller_on,
                                 "poses": vr_state.poses,
                                 "buttons": vr_state.buttons
                             }
                             
                             # Calculate action if movement is enabled
-                            action = np.zeros(7)  # Default no movement
-                            if vr_state.movement_enabled and hasattr(self, 'vr_state') and self.vr_state:
+                            action = np.zeros(14)  # Default no movement
+                            if  (vr_state.left_movement_enabled or vr_state.right_movement_enabled) and hasattr(self, 'vr_state') and self.vr_state:
                                 # Use the last calculated action if available
                                 if hasattr(self, '_last_action'):
                                     action = self._last_action
@@ -2278,14 +2244,25 @@ class OculusVRServer:
         # Default action (no movement)
         action = np.zeros(14)
         action_info = {}
-        # if  self._state["toggle_state"]:
-        #     if self._robot_gripper_count==0:
-        #         print("    Gripper opened")
-        #         self._robot.set_gripper_params(position=1000, force=30, speed=50,block=0)
-        #     else:
-        #         print("    Gripper closed")
-        #         self._robot.grasp(timeout=8)
-        #     self._state["toggle_state"]=False
+       
+       
+        if  self._state["left_gripper_toggle_state"]:
+            if self._robot_gripper_count_left==0:
+                print("    Gripper opened")
+                self.left_arm.set_gripper_params(position=1000, force=30, speed=50,block=0)
+            elif self._robot_gripper_count_left==1:
+                print("    Gripper closed")
+                self._robot.grasp(timeout=8)
+            self._state["left_gripper_toggle_state"]=False
+            
+        if  self._state["right_gripper_toggle_state"]:
+            if self._robot_gripper_count_right==0:
+                print("    Gripper opened")
+                self.right_arm.set_gripper_params(position=1000, force=30, speed=50,block=0)
+            elif self._robot_gripper_count_right==1:
+                print("    Gripper closed")
+                self._robot.grasp(timeout=8)
+            self._state["right_gripper_toggle_state"]=False
 
         # #独立控制rz
         # joyvalue=self._state["buttons"].get("rightJS" if self.right_controller else "leftJS", [0.0])[0]
@@ -2324,8 +2301,8 @@ class OculusVRServer:
                         vr_origin_pos= self.robot_origin_left["pos"] , 
                         vr_origin_euler=self.robot_origin_left["euler"],
                     )
-            
-            
+                
+                action_left[-1]=self._robot_gripper_count_left
             # Convert velocity to position target
             target_pos, target_euler, target_gripper = self.velocity_to_position_target( velocity_action=action_left )
             pos_scale =1
@@ -2349,6 +2326,7 @@ class OculusVRServer:
         else:
             # new_left_robot_state = robot_state["left"]
             action_left = np.zeros(7)
+            action_left[-1]=self._robot_gripper_count_left
             if not self.debug and self._state["left_grip_released"]:
                 print("    left Gripper released  Stop!") 
                 self.left_arm.robot.servo_move_enable(False)
@@ -2378,8 +2356,8 @@ class OculusVRServer:
                         vr_origin_pos= self.robot_origin_right["pos"] , 
                         vr_origin_euler=self.robot_origin_right["euler"],
                     )
-          
-            
+                
+                action_right[-1]=self._robot_gripper_count_right
             # Convert velocity to position target
             target_pos, target_euler, target_gripper = self.velocity_to_position_target( velocity_action=action_right )
             pos_scale =1
