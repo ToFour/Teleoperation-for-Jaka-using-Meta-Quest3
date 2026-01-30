@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+# -*- coding: GBK -*-
 """
 Oculus VR Server - Implements VRPolicy-style teleoperation control
 Based on droid/controllers/oculus_controller.py
@@ -93,8 +95,8 @@ class VRState:
             left_movement_enabled=self.left_movement_enabled,
             right_movement_enabled=self.right_movement_enabled,
             controller_on=self.controller_on,
-            left_toggle_state=self.left_toggle_state,
-            right_toggle_state=self.right_toggle_state,
+            left_grip_released=self.left_grip_released,
+            right_grip_released=self.right_grip_released,
             left_toggle_state=self.left_toggle_state,
             right_toggle_state=self.right_toggle_state
         )
@@ -284,7 +286,11 @@ class ArmController:
         """Reset robot to home position"""
         if self.debug: return
         # Home position from original code
-        target_pos = [355, -122, 356, math.radians(180.0), math.radians(0.0), math.radians(145.0)]
+        
+        if self.side == "left":
+            target_pos = [355, 122, 356, math.radians(180.0), math.radians(0.0), math.radians(145.0)]
+        else:
+            target_pos = [355, -122, 356, math.radians(180.0), math.radians(0.0), math.radians(145.0)]
         self.robot.move_linear_extend(target_pos, _speed=200, _accel=100, TOL=0.1, _is_block=True, _move_mode=0)
         self.reset_origin = True # Force origin reset after home
 
@@ -327,8 +333,8 @@ class ArmController:
         except Exception as e:
             # print(f"[{self.side}] Read Error: {e}")
             return None
-    def calculate_action(self, vr_pos, vr_quat, vr_euler, vr_gripper,
-                                               robot_pos, robot_quat, robot_euler, robot_gripper,
+    def calculate_action(self, vr_pos, vr_quat, vr_euler, 
+                                               robot_pos, robot_quat, robot_euler, 
                                                vr_origin_pos=None, vr_origin_quat=None, vr_origin_euler=None,
                                                robot_origin_pos=None, robot_origin_quat=None, robot_origin_euler=None):
         """
@@ -354,10 +360,15 @@ class ArmController:
         robot_pos_offset = robot_pos - robot_origin_pos
         target_pos_offset = vr_pos - vr_origin_pos
         pos_action = target_pos_offset - robot_pos_offset
-
-        # Calculate Rotation Action
-        # VR controller's relative rotation from its origin
-   
+        print("======== action debug ============")
+        print(f"robot_origin_pos: {robot_origin_pos}")
+        print(f"robot_pos: {robot_pos}")
+        print(f"vr_origin_pos: {vr_origin_pos}")
+        print(f"vr_pos: {vr_pos}")
+        print(f"Target Pos Offset: {target_pos_offset}")
+        print(f"Robot Pos Offset: {robot_pos_offset}")
+        print(f"Pos Action: {pos_action}")
+        print("---------------------------------------")
 
         # Calculate target euler offset
         robot_euler_offset = compute_angle_increment(robot_euler[:3], robot_origin_euler[:3])
@@ -377,7 +388,7 @@ class ArmController:
         # Scale appropriately - DROID exact gains
         pos_action *= self.pos_gain
         euler_action_final *= self.rot_gain
-        gripper_action *= self.gripper_gain
+     
         
         # Apply velocity limits
         lin_vel_norm = np.linalg.norm(pos_action)
@@ -661,7 +672,7 @@ class OculusVRServer:
                  simulation=False,
                  coord_transform=None,
                  rotation_mode="labelbox",
-                 performance_mode=False,
+                 performance_mode=True,
                  enable_recording=True,
                  camera_configs=None,
                  verify_data=False,
@@ -945,7 +956,7 @@ class OculusVRServer:
             # but achieve the same or better overall speed
             #调整每个cycle 的delta大小
             
-            self.max_lin_delta = 0.005 # Maximum linear movement per control cycle
+            self.max_lin_delta = 0.007 # Maximum linear movement per control
             self.max_rot_delta =0.008 
             print("\n? PERFORMANCE MODE ENABLED:")
             print(f"   Control frequency: {self.control_hz}Hz (2x faster)")
@@ -1130,7 +1141,7 @@ class OculusVRServer:
           
             # Update control flags
             self.update_sensor = self.update_sensor or current_grip
-            self.reset_origin = self.reset_origin or grip_toggled
+            # self.reset_origin = self.reset_origin or grip_toggled
             self.reset_origin_left= self.reset_origin_left or edge_events["left"]["grip_toggled"]
             self.reset_origin_right= self.reset_origin_right or edge_events["right"]["grip_toggled"]
             # Save Info
@@ -1650,7 +1661,7 @@ class OculusVRServer:
         # Extract components
         lin_vel = velocity_action[:3]
         rot_vel = velocity_action[3:6]
-        gripper_vel = velocity_action[6]
+        # gripper_vel = velocity_action[6]
         
         # DROID-style velocity to delta conversion
         # Velocities are already clipped to [-1, 1] and represent fraction of max velocity
@@ -1668,10 +1679,10 @@ class OculusVRServer:
         pos_delta = lin_vel * self.max_lin_delta
         rot_delta = rot_vel * self.max_rot_delta
         # Gripper uses simple scaling
-        gripper_delta = gripper_vel * self.control_interval
+        # gripper_delta = gripper_vel * self.control_interval
         
         # Calculate target gripper
-        target_gripper = np.clip(self.robot_gripper + gripper_delta, 0.0, 1.0)
+        # target_gripper = np.clip(self.robot_gripper + gripper_delta, 0.0, 1.0)
         
       
                
@@ -1681,7 +1692,7 @@ class OculusVRServer:
         # rot_temp = quat_to_euler(rot_delta)
         # rot_delta=rot_temp[:3]
         # return target_pos, target_quat, target_gripper
-        return pos_delta, rot_delta, target_gripper
+        return pos_delta, rot_delta, 0.0
     
     def control_loop(self):
         """Main control loop - now coordinates async workers"""
@@ -1902,18 +1913,18 @@ class OculusVRServer:
                                 "read_end": int(timestep_data.timestamp * 1e9)
                             }
                         },
-                        "robot_state": {
-                            "joint_positions": timestep_data.robot_state.joint_positions.tolist() if timestep_data.robot_state.joint_positions is not None else [],
-                            "joint_velocities": [],
-                            "joint_efforts": [],
-                            "cartesian_position": np.concatenate([
-                                timestep_data.robot_state.pos,
-                                timestep_data.robot_state.euler
-                            ]).tolist(),
-                            "cartesian_velocity": [],
-                            "gripper_position": timestep_data.robot_state.gripper,
-                            "gripper_velocity": 0.0
-                        },
+                        # "robot_state": {
+                        #     "joint_positions": [],
+                        #     "joint_velocities": [],
+                        #     "joint_efforts": [],
+                        #     "cartesian_position": np.concatenate([
+                        #         timestep_data.robot_state.pos,
+                        #         timestep_data.robot_state.euler
+                        #     ]).tolist(),
+                        #     "cartesian_velocity": [],
+                        #     "gripper_position": timestep_data.robot_state.gripper,
+                        #     "gripper_velocity": 0.0
+                        # },
                         "controller_info": timestep_data.info
                     },
                     "action": timestep_data.action.tolist() if hasattr(timestep_data.action, 'tolist') else timestep_data.action
@@ -2147,7 +2158,8 @@ class OculusVRServer:
         self._state["buttons"] = vr_state.buttons
         #这里的的poses 和 buttons 是包含左右手柄数据的字典
         #
-        self._state["movement_enabled"] = vr_state.movement_enabled
+        self._state["left_movement_enabled"] = vr_state.left_movement_enabled
+        self._state["right_movement_enabled"] = vr_state.right_movement_enabled
         self._state["controller_on"] = vr_state.controller_on
       
         # self._state["grip_released"] = vr_state.grip_released
@@ -2244,24 +2256,24 @@ class OculusVRServer:
         # Default action (no movement)
         action = np.zeros(14)
         action_info = {}
-       
-       
+        action_right=np.zeros(7)
+        action_left=np.zeros(7)
         if  self._state["left_gripper_toggle_state"]:
             if self._robot_gripper_count_left==0:
                 print("    Gripper opened")
-                self.left_arm.set_gripper_params(position=1000, force=30, speed=50,block=0)
+                self.left_arm.robot.set_gripper_params(position=1000, force=30, speed=50,block=0)
             elif self._robot_gripper_count_left==1:
                 print("    Gripper closed")
-                self._robot.grasp(timeout=8)
+                self.left_arm.robot.grasp(timeout=8)
             self._state["left_gripper_toggle_state"]=False
             
         if  self._state["right_gripper_toggle_state"]:
             if self._robot_gripper_count_right==0:
                 print("    Gripper opened")
-                self.right_arm.set_gripper_params(position=1000, force=30, speed=50,block=0)
+                self.right_arm.robot.set_gripper_params(position=1000, force=30, speed=50,block=0)
             elif self._robot_gripper_count_right==1:
                 print("    Gripper closed")
-                self._robot.grasp(timeout=8)
+                self.right_arm.robot.grasp(timeout=8)
             self._state["right_gripper_toggle_state"]=False
 
         # #独立控制rz
@@ -2274,6 +2286,7 @@ class OculusVRServer:
         # # Calculate action if movement is enabled
          # Read Sensor
         if self.update_sensor:
+            # print("process reading")
             self._process_reading()#处理两个手柄的信息
             self.update_sensor = False
         
@@ -2283,33 +2296,36 @@ class OculusVRServer:
         
         if  info["left_movement_enabled"] and self._state["poses"]:
             #vr位姿更新并且运动使能
-            self.left_arm.robot.servo_move_enable(True)
+            self.left_arm.robot.robot.servo_move_enable(True)
             
             if self.reset_origin_left:
-                self.reset_origin_left = {"pos": self.robot_pos["left"], "quat": self.robot_quat["left"],"euler":self.robot_euler["left"]}
-                self.reset_origin_left= {"pos": self.vr_state["pos"]["left"], "quat": self.vr_state["quat"]["left"],"euler":self.vr_state["euler"]["left"]}
+                print("? reset_origin_left ")
+                self.robot_origin_left = {"pos": self.robot_pos["left"], "quat": self.robot_quat["left"],"euler":self.robot_euler["left"]}
+                self.vr_origin_left = {"pos": self.vr_state["pos"]["left"], "quat": self.vr_state["quat"]["left"],"euler":self.vr_state["euler"]["left"]}
                 self.reset_origin_left = False
-                print("? Origin calibrated")
-           
-                action_left= self.left_arm.calculate_action(
-                        vr_pos=self.vr_state["pos"]["left"],
-                        vr_euler=self.vr_state["euler"]["left"],
-                        vr_quat=self.vr_state["quat"]["left"],
-                        vr_gripper=self.vr_state["gripper"],
-                        robot_pos=self.robot_pos["left"],
-                        robot_quat=self.robot_quat["left"],
-                        vr_origin_pos= self.robot_origin_left["pos"] , 
-                        vr_origin_euler=self.robot_origin_left["euler"],
-                    )
                 
-                action_left[-1]=self._robot_gripper_count_left
+           
+            action_left= self.left_arm.calculate_action(
+                    vr_pos=self.vr_state["pos"]["left"],
+                    vr_euler=self.vr_state["euler"]["left"],
+                    vr_quat=self.vr_state["quat"]["left"],
+                    robot_pos=self.robot_pos["left"],
+                    robot_euler=self.robot_euler["left"],
+                    robot_quat=self.robot_quat["left"],                   
+                    vr_origin_pos= self.vr_origin_left["pos"] , 
+                    vr_origin_euler=self.vr_origin_left["euler"],
+                    robot_origin_pos= self.robot_origin_left["pos"] ,
+                    robot_origin_euler= self.robot_origin_left["euler"],
+                )
+            
+            action_left[-1]=self._robot_gripper_count_left
             # Convert velocity to position target
-            target_pos, target_euler, target_gripper = self.velocity_to_position_target( velocity_action=action_left )
+            target_pos_left, target_euler_left, target_gripper = self.velocity_to_position_target( velocity_action=action_left )
             pos_scale =1
             euler_scale = 1
-           
-            delta=np.asarray([target_pos[0]*1000*pos_scale,target_pos[1]*1000*pos_scale,target_pos[2]*1000*pos_scale,-target_euler[0]*euler_scale,-target_euler[1]*euler_scale,target_euler[2]*euler_scale])
-           
+
+            delta_left=np.asarray([target_pos_left[0]*1000*pos_scale,target_pos_left[1]*1000*pos_scale,target_pos_left[2]*1000*pos_scale,-target_euler_left[0]*euler_scale,-target_euler_left[1]*euler_scale,target_euler_left[2]*euler_scale])
+            delta_TEST=np.asarray([target_pos_left[0]*1000*pos_scale,target_pos_left[1]*1000*pos_scale,target_pos_left[2]*1000*pos_scale,0,0,0])
 
             # Send action to robot (or simulate)
             if not self.debug:
@@ -2319,7 +2335,7 @@ class OculusVRServer:
                 
                 try:
                     # pass
-                    self.left_arm.robot.servo_p_extend(delta, move_mode=1, step_num=_step_num)
+                    self.left_arm.robot.robot.servo_p_extend(delta_left, move_mode=1, step_num=_step_num)
                     
                 except Exception as e:
                     print(f"    ? Error in robot move: {e}")        
@@ -2329,8 +2345,8 @@ class OculusVRServer:
             action_left[-1]=self._robot_gripper_count_left
             if not self.debug and self._state["left_grip_released"]:
                 print("    left Gripper released  Stop!") 
-                self.left_arm.robot.servo_move_enable(False)
-                self.left_arm.stop_motion()
+                self.left_arm.robot.robot.servo_move_enable(False)
+                self.left_arm.robot.stop_motion()
                 self._state["left_grip_released"]=False
 
        
@@ -2338,33 +2354,38 @@ class OculusVRServer:
                           
         if  info["right_movement_enabled"] and self._state["poses"]:
             #vr位姿更新并且运动使能
-            self.right_arm.robot.servo_move_enable(True)
+            self.right_arm.robot.robot.servo_move_enable(True)
             
             if self.reset_origin_right:
+                print("reset orgin right")
                 self.robot_origin_right = {"pos": self.robot_pos["right"], "quat": self.robot_quat["right"],"euler":self.robot_euler["right"]}
                 self.vr_origin_right= {"pos": self.vr_state["pos"]["right"], "quat": self.vr_state["quat"]["right"],"euler":self.vr_state["euler"]["right"]}
                 self.reset_origin_right = False
-                print("? Origin calibrated")
-           
-                action_right= self.right_arm.calculate_action(
-                        vr_pos=self.vr_state["pos"]["right"],
-                        vr_euler=self.vr_state["euler"]["right"],
-                        vr_quat=self.vr_state["quat"]["right"],
-                        vr_gripper=self.vr_state["gripper"],
-                        robot_pos=self.robot_pos["right"],
-                        robot_quat=self.robot_quat["right"],
-                        vr_origin_pos= self.robot_origin_right["pos"] , 
-                        vr_origin_euler=self.robot_origin_right["euler"],
-                    )
                 
-                action_right[-1]=self._robot_gripper_count_right
+           
+            action_right= self.right_arm.calculate_action(
+                    vr_pos=self.vr_state["pos"]["right"],
+                    vr_euler=self.vr_state["euler"]["right"],
+                    vr_quat=self.vr_state["quat"]["right"],
+                    robot_pos=self.robot_pos["right"],
+                    robot_euler=self.robot_euler["right"],
+                    robot_quat=self.robot_quat["right"],
+                    vr_origin_pos= self.vr_origin_right["pos"] , 
+                    vr_origin_euler=self.vr_origin_right["euler"],
+                    robot_origin_pos= self.robot_origin_right["pos"] ,
+                    robot_origin_euler= self.robot_origin_right["euler"],
+                )
+            
+            action_right[-1]=self._robot_gripper_count_right
+                
             # Convert velocity to position target
             target_pos, target_euler, target_gripper = self.velocity_to_position_target( velocity_action=action_right )
             pos_scale =1
             euler_scale = 1
            
             delta=np.asarray([target_pos[0]*1000*pos_scale,target_pos[1]*1000*pos_scale,target_pos[2]*1000*pos_scale,-target_euler[0]*euler_scale,-target_euler[1]*euler_scale,target_euler[2]*euler_scale])
-           
+            delta_test=np.asarray([target_pos[0]*1000*pos_scale,target_pos[1]*1000*pos_scale,target_pos[2]*1000*pos_scale,-target_euler[0]*euler_scale,-target_euler[1]*euler_scale,0])
+            print(f"delta: {delta}")
 
             # Send action to robot (or simulate)
             if not self.debug:
@@ -2373,21 +2394,19 @@ class OculusVRServer:
                 if self.enable_performance_mode:_step_num=2
                 
                 try:
-                    self.right_arm.robot.servo_p_extend(delta, move_mode=1, step_num=_step_num)   
+                    self.right_arm.robot.robot.servo_p_extend(delta, move_mode=1, step_num=_step_num)   
                 except Exception as e:
-                    print(f"    ? Error in robot move: {e}")
-                
-                   
+                    print(f"    ? Error in robot move: {e}")         
         else:
             # new_left_robot_state = robot_state["left"]
             action_right = np.zeros(7)
             if not self.debug and self._state["right_grip_released"]:
                 print("    right Gripper released  Stop!") 
-                self.right_arm.robot.servo_move_enable(False)
-                self.right_arm.stop_motion()
-                self._state["right_grip_released"]=False        
-                
-                
+                self.right_arm.robot.robot.servo_move_enable(False)
+                self.right_arm.robot.stop_motion()
+                self._state["right_grip_released"]=False
+
+
         self._last_action = np.concatenate([action_right.copy(), action_left.copy()])
             
         #状态更新  如果有一个臂使能  就更新状态 
@@ -2590,7 +2609,7 @@ Polymetis (euler angle-based). The rotation handling has been adjusted according
         simulation=args.simulation,
         coord_transform=coord_transform,
         rotation_mode=args.rotation_mode,
-        performance_mode=args.performance,
+        performance_mode=True,
         enable_recording=not args.no_recording,
         
         verify_data=args.verify_data,
