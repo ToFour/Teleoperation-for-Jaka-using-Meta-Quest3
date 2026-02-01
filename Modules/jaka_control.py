@@ -208,12 +208,7 @@ class JakaRobot:
         self.heartbeat_running = False
         self.heartbeat_thread = None
         self.heartbeat_interval=0.05
-        
-        self.gripper_monitoring = False
-        self.current_gripper_position = 0
-        self.current_gripper_force = 50
-        self.current_gripper_speed = 50
-        self.gripper_status_callbacks = []
+     
 
         #夹爪标识（用于区分左右臂夹爪）
         self.gripper_name = gripper_name
@@ -240,7 +235,10 @@ class JakaRobot:
         self.gripper_monitoring = False
         self.gripper_monitor_thread = None
         self.current_gripper_status = 0
+        self.current_gripper_prams=np.zeros(3)
         self.current_gripper_position = 0
+        self.current_gripper_force=0
+        self.current_gripper_speed=0
         self.gripper_status_callbacks = []
         self.gripper_data_lock = threading.Lock()
         
@@ -251,7 +249,9 @@ class JakaRobot:
         # }
         self.gripper_signal_config = {
             'status_run': 513,  # 状态变量标识名
-            'position': 514       # 位置变量标识名
+            'position': 514 ,      # 位置变量标识名
+            'force':257,
+            'speed':260
         }
         # 信号刷新频率（Hz），不超过20Hz
         self.gripper_signal_frequency = 1
@@ -592,9 +592,12 @@ class JakaRobot:
             
             status_run = 0
             position = 0
+            force=0
+            speed=0
             found_status = False
             found_position = False
-            
+            found_force=False
+            found_speed=False
             # 遍历信号列表，查找目标信号
             for sig_info in sign_info_list:
                 sig_name = sig_info.get('sig_name', '')
@@ -606,12 +609,18 @@ class JakaRobot:
                 elif sig_addr == self.gripper_signal_config['position']:
                     position = sig_value
                     found_position = True
+                elif sig_addr == self.gripper_signal_config['force']:
+                    force = sig_value
+                    found_force = True
+                elif sig_addr == self.gripper_signal_config['speed']:
+                    speed = sig_value
+                    found_speed = True
                 
                 # 如果两个信号都找到，提前退出
-                if found_status and found_position:
+                if found_status and found_position and found_force and found_speed:
                     break
             
-            return True, status_run, position
+            return True, status_run, position,force,speed
             
         except Exception as e:
             logger.error("获取夹爪状态异常: {}".format(str(e)))
@@ -632,14 +641,16 @@ class JakaRobot:
         while self.gripper_monitoring and self.is_connected:
             try:
                 # 获取最新状态
-                success, status_run, position = self._update_gripper_status()
+                success, status_run, position,force,speed = self._update_gripper_status()
                 # print("夹爪状态: {}, 位置: {}".format(status_run, position))
                 if success:
                     with self.gripper_data_lock:
                         old_status = self.current_gripper_status
                         self.current_gripper_status = status_run
                         self.current_gripper_position = position
-                       
+                        self.current_gripper_force=force
+                        self.current_gripper_speed=speed
+                        self.current_gripper_prams=np.concatenate((force,position,speed))
                     # 状态变化时触发回调
                     if old_status != status_run:
                         self._trigger_status_callbacks(status_run, position)

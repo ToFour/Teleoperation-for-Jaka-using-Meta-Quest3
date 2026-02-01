@@ -139,8 +139,11 @@ class MCAPDataRecorder:
                         "type": "array",
                         "items": {"type": "number"}
                     },
-                    "gripper_position": {"type": "number"},
-                    "gripper_velocity": {"type": "number"}
+                    "gripper_paras": {
+                        "type": "array",
+                        "items": {"type": "number"}
+                    }
+                    # "gripper_velocity": {"type": "number"}
                 }
             }).encode("utf-8")
         )

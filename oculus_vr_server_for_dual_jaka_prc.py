@@ -109,7 +109,7 @@ class RobotState:
     pos: np.ndarray
     quat: np.ndarray
     euler: np.ndarray
-    gripper: float
+    gripper: np.ndarray     #力位速
     joint_positions: Optional[np.ndarray]
     
     def copy(self):
@@ -1899,6 +1899,13 @@ class OculusVRServer:
         while self.running or not self.mcap_queue.empty():
             try:
                 # Get data from queue with timeout
+                # timestep_data=TimestepData(
+                #                 timestamp=None,
+                #                 vr_state=None,
+                #                 robot_state=None,
+                #                 action=None,
+                #                 info=None
+                #             )
                 timestep_data = self.mcap_queue.get(timeout=0.1)
                 
                 if timestep_data is None:  # Poison pill
@@ -1913,18 +1920,22 @@ class OculusVRServer:
                                 "read_end": int(timestep_data.timestamp * 1e9)
                             }
                         },
-                        # "robot_state": {
-                        #     "joint_positions": [],
-                        #     "joint_velocities": [],
-                        #     "joint_efforts": [],
-                        #     "cartesian_position": np.concatenate([
-                        #         timestep_data.robot_state.pos,
-                        #         timestep_data.robot_state.euler
-                        #     ]).tolist(),
-                        #     "cartesian_velocity": [],
-                        #     "gripper_position": timestep_data.robot_state.gripper,
-                        #     "gripper_velocity": 0.0
-                        # },
+                        "robot_state": {
+                            "joint_positions": np.concatenate([
+                                timestep_data.robot_state['left'].joint_positions,
+                                timestep_data.robot_state['right'].joint_positions
+                            ]).tolist(),
+                            "cartesian_position": np.concatenate([
+                                timestep_data.robot_state['left'].pos,
+                                timestep_data.robot_state['left'].euler,
+                                timestep_data.robot_state['right'].pos,
+                                timestep_data.robot_state['right'].euler
+                            ]).tolist(),
+                            "gripper_paras": np.concatenate([
+                                timestep_data.robot_state['left'].gripper,
+                                timestep_data.robot_state['right'].gripper
+                            ]).tolist()                   
+                            },
                         "controller_info": timestep_data.info
                     },
                     "action": timestep_data.action.tolist() if hasattr(timestep_data.action, 'tolist') else timestep_data.action
@@ -2318,7 +2329,7 @@ class OculusVRServer:
                     robot_origin_euler= self.robot_origin_left["euler"],
                 )
             
-            action_left[-1]=self._robot_gripper_count_left
+            action_left[-1]=round(self.left_arm.robot.current_gripper_position/1000)   #归一化
             # Convert velocity to position target
             target_pos_left, target_euler_left, target_gripper = self.velocity_to_position_target( velocity_action=action_left )
             pos_scale =1
@@ -2342,7 +2353,7 @@ class OculusVRServer:
         else:
             # new_left_robot_state = robot_state["left"]
             action_left = np.zeros(7)
-            action_left[-1]=self._robot_gripper_count_left
+            action_left[-1]=round(self.left_arm.robot.current_gripper_position/1000)   #归一化
             if not self.debug and self._state["left_grip_released"]:
                 print("    left Gripper released  Stop!") 
                 self.left_arm.robot.robot.servo_move_enable(False)
@@ -2376,7 +2387,7 @@ class OculusVRServer:
                     robot_origin_euler= self.robot_origin_right["euler"],
                 )
             
-            action_right[-1]=self._robot_gripper_count_right
+            action_right[-1]=round(self.right_arm.robot.current_gripper_position/1000)   #归一化
                 
             # Convert velocity to position target
             target_pos, target_euler, target_gripper = self.velocity_to_position_target( velocity_action=action_right )
@@ -2400,6 +2411,7 @@ class OculusVRServer:
         else:
             # new_left_robot_state = robot_state["left"]
             action_right = np.zeros(7)
+            action_right[-1]=round(self.right_arm.robot.current_gripper_position/1000)   #归一化
             if not self.debug and self._state["right_grip_released"]:
                 print("    right Gripper released  Stop!") 
                 self.right_arm.robot.robot.servo_move_enable(False)
@@ -2407,8 +2419,8 @@ class OculusVRServer:
                 self._state["right_grip_released"]=False
 
 
-        self._last_action = np.concatenate([action_right.copy(), action_left.copy()])
-            
+        # self._last_action = np.concatenate([action_right.copy(), action_left.copy()])
+        self._last_action = np.concatenate([action_left.copy(), action_right.copy()])  
         #状态更新  如果有一个臂使能  就更新状态 
         if  info["right_movement_enabled"] or info["left_movement_enabled"]:
             # Not moving - use current robot state
@@ -2425,7 +2437,7 @@ class OculusVRServer:
                     pos=0.001*new_left_robot_cartesian[:3],
                     quat=euler_to_quat(new_left_robot_cartesian[3:]),
                     euler=new_left_robot_cartesian[3:],
-                    gripper=self.left_arm._robot_gripper_state,
+                    gripper=self.left_arm.robot.current_gripper_prams,
                     joint_positions=new_left_robot_joints        
                 )
 
@@ -2434,7 +2446,7 @@ class OculusVRServer:
                     pos=0.001*new_right_robot_cartesian[:3],
                     quat=euler_to_quat(new_right_robot_cartesian[3:]),
                     euler=new_right_robot_cartesian[3:],
-                    gripper=self.right_arm._robot_gripper_state,
+                    gripper=self.right_arm.robot.current_gripper_prams,
                     joint_positions=new_right_robot_joints        
                 )
 
