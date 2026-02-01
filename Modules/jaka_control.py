@@ -650,7 +650,7 @@ class JakaRobot:
                         self.current_gripper_position = position
                         self.current_gripper_force=force
                         self.current_gripper_speed=speed
-                        self.current_gripper_prams=np.concatenate((force,position,speed))
+                        self.current_gripper_prams=np.array((force,position,speed))
                     # 状态变化时触发回调
                     if old_status != status_run:
                         self._trigger_status_callbacks(status_run, position)
