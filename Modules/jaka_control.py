@@ -221,7 +221,7 @@ class JakaRobot:
 
         # 夹爪命令构建器实例
         self.gripper_builder = GripperCommandBuilder(slave_id=self.gripper_slave_id, name=self.gripper_name)
-
+      
         # 运动参数
         self.joint_speed = 20
         self.joint_accel = 4.0
@@ -245,9 +245,13 @@ class JakaRobot:
         self.gripper_data_lock = threading.Lock()
         
         # 夹爪信号配置（可根据实际夹爪文档调整标识名）
+        # self.gripper_signal_config = {
+        #     'status_run': 'status_run',  # 状态变量标识名
+        #     'position': 'position'       # 位置变量标识名
+        # }
         self.gripper_signal_config = {
-            'status_run': 'status_run',  # 状态变量标识名
-            'position': 'position'       # 位置变量标识名
+            'status_run': 513,  # 状态变量标识名
+            'position': 514       # 位置变量标识名
         }
         # 信号刷新频率（Hz），不超过20Hz
         self.gripper_signal_frequency = 1
@@ -595,11 +599,11 @@ class JakaRobot:
             for sig_info in sign_info_list:
                 sig_name = sig_info.get('sig_name', '')
                 sig_value = sig_info.get('value', 0)
-                
-                if sig_name == self.gripper_signal_config['status_run']:
+                sig_addr = sig_info.get('sig_addr', 0)
+                if sig_addr == self.gripper_signal_config['status_run']:
                     status_run = sig_value
                     found_status = True
-                elif sig_name == self.gripper_signal_config['position']:
+                elif sig_addr == self.gripper_signal_config['position']:
                     position = sig_value
                     found_position = True
                 
@@ -1061,6 +1065,8 @@ class JakaRobot:
         self.heartbeat_running = True
         self.heartbeat_thread = threading.Thread(target=self._heartbeat_loop, daemon=True)
         self.heartbeat_thread.start()
+        
+        self.start_gripper_monitoring()
         logger.info("心跳线程已启动")
 
     def stop_heartbeat(self):
@@ -1112,4 +1118,4 @@ if __name__ == "__main__":
            
         #     robot.set_gripper_params(position=500, force=30, speed=50,block=1)
         #     time.sleep(0.1)
-        #     robot.set_gripper_params(position=800, force=30, speed=50,block=1)
+        robot.set_gripper_params(position=800, force=30, speed=50,block=1)
