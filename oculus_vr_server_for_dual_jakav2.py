@@ -835,6 +835,8 @@ class OculusVRServer:
         
         # Last action for recording thread
         self._last_action = np.zeros(14)
+        self._last_action_left = np.zeros(7)
+        self._last_action_right = np.zeros(7)
         
     def signal_handler(self, signum, frame):
         """Handle Ctrl+C and other termination signals"""
@@ -1525,6 +1527,11 @@ class OculusVRServer:
         self._robot_control_thread.daemon = True
         self._robot_control_thread.start()
         self._threads.append(self._robot_control_thread)
+        
+        self._robot_control_ot_thread = threading.Thread(target=self._robot_control_worker_ot)
+        self._robot_control_ot_thread.daemon = True
+        self._robot_control_ot_thread.start()
+        self._threads.append(self._robot_control_ot_thread)
         print("? Robot control thread started")
         
         # Main loop now status and handles high-level control
@@ -1799,7 +1806,79 @@ class OculusVRServer:
                     time.sleep(0.1)
         
         print("? Robot control thread stopped")
-
+    def _robot_control_worker_ot(self):
+        """Asynchronous robot control thread - sends commands at control frequency"""
+        print("? Robot control thread started")
+        print(f"   Target control frequency: {self.control_hz}Hz")
+        print(f"   Control interval: {self.control_interval*1000:.1f}ms")
+        
+        last_control_time = time.time()
+        control_count = 0
+        freq_check_time = time.time()
+        
+        # Track prediction accuracy
+        prediction_errors = deque(maxlen=100)
+        using_predictions = False
+        
+        while self.running:
+            try:
+                current_time = time.time()
+                #线程之间串行并发导致控制帧率改变
+                # Skip if control is paused
+                if self._control_paused:
+                    time.sleep(0.01)
+                    continue
+                
+                # Control at specified frequency
+                if current_time - last_control_time >= self.control_interval:#确保最小执行间隔
+                    #获取最新 状态
+                    # Get latest VR state
+                    with self._vr_state_lock:
+                        vr_state = self._latest_vr_state.copy() if self._latest_vr_state else None
+                    
+                    # Get latest robot state
+                    with self._robot_state_lock:
+                        robot_state = self._latest_robot_state.copy() if self._latest_robot_state else None
+                    
+                    if vr_state and robot_state:
+                        # Check if we're using predictions
+                        state_age = max(current_time - robot_state['left'].timestamp,
+                                        current_time - robot_state['right'].timestamp)
+                        if state_age > self.control_interval * 2:
+                            #当前时间与采样时间差大于2倍控制间隔，说明机器人状态更新不及时，在debug信息中显示但并无实际调整
+                            if not using_predictions:
+                                using_predictions = True
+                        else:
+                            if using_predictions:
+                                using_predictions = False
+                        # 发给控制器
+                        # Process control command
+                        self._process_control_cycle_ot(vr_state, robot_state, current_time)
+                        control_count += 1
+                    
+                    last_control_time = current_time
+                    
+                    # Print actual frequency every second
+                    
+                    if current_time - freq_check_time >= 1.0:#每秒算一次
+                        actual_freq = control_count / (current_time - freq_check_time)
+                        if self.recording_active:
+                            status = "PREDICTIVE" if using_predictions else "REAL-TIME"
+                            print(f"? Control frequency: {actual_freq:.1f}Hz (target: {self.control_hz}Hz) - {status}")
+                        control_count = 0
+                        freq_check_time = current_time
+                
+                # Small sleep to prevent CPU spinning
+                time.sleep(0.001)
+                
+            except Exception as e:
+                if self.running:
+                    print(f"? Error in robot control: {e}")
+                    import traceback
+                    traceback.print_exc()
+                    time.sleep(0.1)
+        
+        print("? Robot control thread stopped")
     def _data_recording_worker(self):
         """Records data at target frequency independent of robot control"""
         print("? Data recording thread started")
@@ -1840,6 +1919,7 @@ class OculusVRServer:
                             if  (vr_state.left_movement_enabled or vr_state.right_movement_enabled) and hasattr(self, 'vr_state') and self.vr_state:
                                 # Use the last calculated action if available
                                 if hasattr(self, '_last_action'):
+                                    self._last_action=np.concatenate([self._last_action_left,self._last_action_right])
                                     action = self._last_action
                             
                             # Create timestep data
@@ -2041,15 +2121,15 @@ class OculusVRServer:
         action = np.zeros(14)
         action_info = {}
         action_right=np.zeros(7)
-        action_left=np.zeros(7)
-        if  self._state["left_gripper_toggle_state"]:
-            if self._robot_gripper_count_left==0:
-                print("    Gripper opened")
-                self.left_arm.robot.set_gripper_params(position=1000, force=30, speed=50,block=0)
-            elif self._robot_gripper_count_left==1:
-                print("    Gripper closed")
-                self.left_arm.robot.grasp(timeout=8)
-            self._state["left_gripper_toggle_state"]=False
+        # action_left=np.zeros(7)
+        # if  self._state["left_gripper_toggle_state"]:
+        #     if self._robot_gripper_count_left==0:
+        #         print("    Gripper opened")
+        #         self.left_arm.robot.set_gripper_params(position=1000, force=30, speed=50,block=0)
+        #     elif self._robot_gripper_count_left==1:
+        #         print("    Gripper closed")
+        #         self.left_arm.robot.grasp(timeout=8)
+        #     self._state["left_gripper_toggle_state"]=False
             
         if  self._state["right_gripper_toggle_state"]:
             if self._robot_gripper_count_right==0:
@@ -2060,14 +2140,252 @@ class OculusVRServer:
                 self.right_arm.robot.grasp(timeout=8)
             self._state["right_gripper_toggle_state"]=False
 
-        # #独立控制rz
-        # joyvalue=self._state["buttons"].get("rightJS" if self.right_controller else "leftJS", [0.0])[0]
-        # # print("    joyvalue:",joyvalue)
-        # if abs(joyvalue)>0.5:    
-        #     if joyvalue>0:          rz_delta=np.asarray([0,0,0,0,0,radians(0.5)])
-        #     else:                   rz_delta=np.asarray([0,0,0,0,0,-radians(0.5)])
-        #     self._robot.move_linear_extend(rz_delta, _speed=200, _accel=100,TOL=0.1,_is_block=False,_move_mode=1)
-        # # Calculate action if movement is enabled
+      
+         # Read Sensor
+        if self.update_sensor:
+            # print("process reading")
+            self._process_reading()#处理两个手柄的信息
+            self.update_sensor = False
+        
+        # Check if we have valid data
+        if self.vr_state is None or self.robot_pos is None:
+            return np.zeros(14), {}
+        
+        # if  info["left_movement_enabled"] and self._state["poses"]:
+        #     #vr位姿更新并且运动使能
+        #     self.left_arm.robot.robot.servo_move_enable(True)
+            
+        #     if self.reset_origin_left:
+        #         print("? reset_origin_left ")
+        #         self.robot_origin_left = {"pos": self.robot_pos["left"], "quat": self.robot_quat["left"],"euler":self.robot_euler["left"]}
+        #         self.vr_origin_left = {"pos": self.vr_state["pos"]["left"], "quat": self.vr_state["quat"]["left"],"euler":self.vr_state["euler"]["left"]}
+        #         self.reset_origin_left = False
+                
+           
+        #     action_left= self.left_arm.calculate_action(
+        #             vr_pos=self.vr_state["pos"]["left"],
+        #             vr_euler=self.vr_state["euler"]["left"],
+        #             vr_quat=self.vr_state["quat"]["left"],
+        #             robot_pos=self.robot_pos["left"],
+        #             robot_euler=self.robot_euler["left"],
+        #             robot_quat=self.robot_quat["left"],                   
+        #             vr_origin_pos= self.vr_origin_left["pos"] , 
+        #             vr_origin_euler=self.vr_origin_left["euler"],
+        #             robot_origin_pos= self.robot_origin_left["pos"] ,
+        #             robot_origin_euler= self.robot_origin_left["euler"],
+        #         )
+            
+        #     action_left[-1]=round(self.left_arm.robot.current_gripper_position/1000)   #归一化
+        #     # Convert velocity to position target
+        #     target_pos_left, target_euler_left, target_gripper = self.velocity_to_position_target( velocity_action=action_left )
+        #     pos_scale =1
+        #     euler_scale = 1
+
+        #     delta_left=np.asarray([target_pos_left[0]*1000*pos_scale,target_pos_left[1]*1000*pos_scale,target_pos_left[2]*1000*pos_scale,-target_euler_left[0]*euler_scale,-target_euler_left[1]*euler_scale,target_euler_left[2]*euler_scale])
+        #     delta_TEST=np.asarray([target_pos_left[0]*1000*pos_scale,target_pos_left[1]*1000*pos_scale,target_pos_left[2]*1000*pos_scale,0,0,0])
+
+        #     # Send action to robot (or simulate)
+        #     if not self.debug:
+        #         # Send action to robot - DEOXYS EXPECTS QUATERNIONS
+        #         _step_num=5
+        #         if self.enable_performance_mode:_step_num=2
+                
+        #         try:
+        #             # pass
+        #             self.left_arm.robot.robot.servo_p_extend(delta_left, move_mode=1, step_num=_step_num)
+                    
+        #         except Exception as e:
+        #             print(f"    ? Error in robot move: {e}")        
+        # else:
+        #     # new_left_robot_state = robot_state["left"]
+        #     action_left = np.zeros(7)
+        #     action_left[-1]=round(self.left_arm.robot.current_gripper_position/1000)   #归一化
+        #     if not self.debug and self._state["left_grip_released"]:
+        #         print("    left Gripper released  Stop!") 
+        #         self.left_arm.robot.robot.servo_move_enable(False)
+        #         self.left_arm.robot.stop_motion()
+        #         self._state["left_grip_released"]=False
+
+       
+            
+                          
+        if  info["right_movement_enabled"] and self._state["poses"]:
+            #vr位姿更新并且运动使能
+            self.right_arm.robot.robot.servo_move_enable(True)
+            
+            if self.reset_origin_right:
+                print("reset orgin right")
+                self.robot_origin_right = {"pos": self.robot_pos["right"], "quat": self.robot_quat["right"],"euler":self.robot_euler["right"]}
+                self.vr_origin_right= {"pos": self.vr_state["pos"]["right"], "quat": self.vr_state["quat"]["right"],"euler":self.vr_state["euler"]["right"]}
+                self.reset_origin_right = False
+                
+           
+            action_right= self.right_arm.calculate_action(
+                    vr_pos=self.vr_state["pos"]["right"],
+                    vr_euler=self.vr_state["euler"]["right"],
+                    vr_quat=self.vr_state["quat"]["right"],
+                    robot_pos=self.robot_pos["right"],
+                    robot_euler=self.robot_euler["right"],
+                    robot_quat=self.robot_quat["right"],
+                    vr_origin_pos= self.vr_origin_right["pos"] , 
+                    vr_origin_euler=self.vr_origin_right["euler"],
+                    robot_origin_pos= self.robot_origin_right["pos"] ,
+                    robot_origin_euler= self.robot_origin_right["euler"],
+                )
+            
+            action_right[-1]=round(self.right_arm.robot.current_gripper_position/1000)   #归一化
+                
+            # Convert velocity to position target
+            target_pos, target_euler, target_gripper = self.velocity_to_position_target( velocity_action=action_right )
+            pos_scale =1
+            euler_scale = 1
+           
+            delta=np.asarray([target_pos[0]*1000*pos_scale,target_pos[1]*1000*pos_scale,target_pos[2]*1000*pos_scale,-target_euler[0]*euler_scale,-target_euler[1]*euler_scale,target_euler[2]*euler_scale])
+            delta_test=np.asarray([target_pos[0]*1000*pos_scale,target_pos[1]*1000*pos_scale,target_pos[2]*1000*pos_scale,-target_euler[0]*euler_scale,-target_euler[1]*euler_scale,0])
+            print(f"delta: {delta}")
+
+            # Send action to robot (or simulate)
+            if not self.debug:
+                # Send action to robot - DEOXYS EXPECTS QUATERNIONS
+                _step_num=5
+                if self.enable_performance_mode:_step_num=2
+                
+                try:
+                    self.right_arm.robot.robot.servo_p_extend(delta, move_mode=1, step_num=_step_num)   
+                except Exception as e:
+                    print(f"    ? Error in robot move: {e}")         
+        else:
+            # new_left_robot_state = robot_state["left"]
+            action_right = np.zeros(7)
+            action_right[-1]=round(self.right_arm.robot.current_gripper_position/1000)   #归一化
+            if not self.debug and self._state["right_grip_released"]:
+                print("    right Gripper released  Stop!") 
+                self.right_arm.robot.robot.servo_move_enable(False)
+                self.right_arm.robot.stop_motion()
+                self._state["right_grip_released"]=False
+
+
+        # self._last_action = np.concatenate([action_right.copy(), action_left.copy()])
+        self._last_action_right =action_right.copy()
+        #状态更新  如果有一个臂使能  就更新状态 
+        if  info["right_movement_enabled"] or info["left_movement_enabled"]:
+            # Not moving - use current robot state
+            try:
+                    # 更新左右臂的状态
+                new_left_robot_cartesian = np.array(self.left_arm.robot.current_cartesian)
+                new_left_robot_joints = np.array(self.left_arm.robot.current_joints)
+                new_right_robot_cartesian = np.array(self.right_arm.robot.current_cartesian)
+                new_right_robot_joints = np.array(self.right_arm.robot.current_joints)
+
+                # 创建新的左右臂状态
+                new_left_robot_state = RobotState(
+                    timestamp=current_time,
+                    pos=0.001*new_left_robot_cartesian[:3],
+                    quat=euler_to_quat(new_left_robot_cartesian[3:]),
+                    euler=new_left_robot_cartesian[3:],
+                    gripper=self.left_arm.robot.current_gripper_prams,
+                    joint_positions=new_left_robot_joints        
+                )
+
+                new_right_robot_state = RobotState(
+                    timestamp=current_time,
+                    pos=0.001*new_right_robot_cartesian[:3],
+                    quat=euler_to_quat(new_right_robot_cartesian[3:]),
+                    euler=new_right_robot_cartesian[3:],
+                    gripper=self.right_arm.robot.current_gripper_prams,
+                    joint_positions=new_right_robot_joints        
+                )
+
+                # 使用线程锁更新机器人状态
+                with self._robot_state_lock:
+                    self._latest_robot_state = {
+                        'left': new_left_robot_state,
+                        'right': new_right_robot_state
+                    }
+
+                # 更新局部状态以供下次计算使用
+                self.robot_pos = {'left': new_left_robot_state.pos, 'right': new_right_robot_state.pos}
+                self.robot_quat = {'left': new_left_robot_state.quat, 'right': new_right_robot_state.quat}
+                self.robot_euler = {'left': new_left_robot_state.euler, 'right': new_right_robot_state.euler}
+                self.robot_gripper = {'left': new_left_robot_state.gripper, 'right': new_right_robot_state.gripper}
+                self.robot_joint_positions = {'left': new_left_robot_state.joint_positions, 'right': new_right_robot_state.joint_positions}
+            except Exception as e:
+                print(f"    ? Error in robot_state update: {e}") 
+            
+            
+        else:   
+            new_robot_state = robot_state
+            with self._robot_state_lock:    
+                self._latest_robot_state = new_robot_state
+
+    def _process_control_cycle_ot(self, vr_state: VRState, robot_state, current_time: float):
+        """Process a single control cycle with given VR and robot states"""
+        # Restore state from thread-safe structures
+        #self._state？
+        #获取最新的机器人vr状态
+        
+        self._state["poses"] = vr_state.poses
+        self._state["buttons"] = vr_state.buttons
+        #这里的的poses 和 buttons 是包含左右手柄数据的字典
+        #
+        self._state["left_movement_enabled"] = vr_state.left_movement_enabled
+        self._state["right_movement_enabled"] = vr_state.right_movement_enabled
+        self._state["controller_on"] = vr_state.controller_on
+      
+        # self._state["grip_released"] = vr_state.grip_released
+        # self._state["toggle_state"] = vr_state.toggle_state
+        # print(f"    grip_released state: {self._state['grip_released']}")
+        # Update robot state
+        #这里的状态要两份
+        # self.robot_pos = robot_state.pos
+        # self.robot_quat = robot_state.quat
+        # self.robot_euler = robot_state.euler
+        # self.robot_gripper = robot_state.gripper
+        # self.robot_joint_positions = robot_state.joint_positions
+        
+        
+        self.robot_pos ={'left': robot_state['left'].pos,
+                         'right': robot_state['right'].pos } 
+        self.robot_quat = {'left': robot_state['left'].quat,
+                         'right': robot_state['right'].quat } 
+        self.robot_euler = {'left': robot_state['left'].euler,
+                         'right': robot_state['right'].euler } 
+        self.robot_gripper =  {'left': robot_state['left'].gripper,
+                         'right': robot_state['right'].gripper  } 
+        self.robot_joint_positions =  {'left': robot_state['left'].joint_positions,
+                                     'right': robot_state['right'].joint_positions  } 
+        
+        
+        
+        # Get controller info
+        #主控制器信息 用于全局控制录制数据，但movementable用于单臂
+        info = self.get_info()
+        
+        
+        # Default action (no movement)
+        action = np.zeros(14)
+        action_info = {}
+        # action_right=np.zeros(7)
+        action_left=np.zeros(7)
+        if  self._state["left_gripper_toggle_state"]:
+            if self._robot_gripper_count_left==0:
+                print("    Gripper opened")
+                self.left_arm.robot.set_gripper_params(position=1000, force=30, speed=50,block=0)
+            elif self._robot_gripper_count_left==1:
+                print("    Gripper closed")
+                self.left_arm.robot.grasp(timeout=8)
+            self._state["left_gripper_toggle_state"]=False
+            
+        # if  self._state["right_gripper_toggle_state"]:
+        #     if self._robot_gripper_count_right==0:
+        #         print("    Gripper opened")
+        #         self.right_arm.robot.set_gripper_params(position=1000, force=30, speed=50,block=0)
+        #     elif self._robot_gripper_count_right==1:
+        #         print("    Gripper closed")
+        #         self.right_arm.robot.grasp(timeout=8)
+        #     self._state["right_gripper_toggle_state"]=False
+
+      
          # Read Sensor
         if self.update_sensor:
             # print("process reading")
@@ -2136,64 +2454,10 @@ class OculusVRServer:
        
             
                           
-        if  info["right_movement_enabled"] and self._state["poses"]:
-            #vr位姿更新并且运动使能
-            self.right_arm.robot.robot.servo_move_enable(True)
-            
-            if self.reset_origin_right:
-                print("reset orgin right")
-                self.robot_origin_right = {"pos": self.robot_pos["right"], "quat": self.robot_quat["right"],"euler":self.robot_euler["right"]}
-                self.vr_origin_right= {"pos": self.vr_state["pos"]["right"], "quat": self.vr_state["quat"]["right"],"euler":self.vr_state["euler"]["right"]}
-                self.reset_origin_right = False
-                
-           
-            action_right= self.right_arm.calculate_action(
-                    vr_pos=self.vr_state["pos"]["right"],
-                    vr_euler=self.vr_state["euler"]["right"],
-                    vr_quat=self.vr_state["quat"]["right"],
-                    robot_pos=self.robot_pos["right"],
-                    robot_euler=self.robot_euler["right"],
-                    robot_quat=self.robot_quat["right"],
-                    vr_origin_pos= self.vr_origin_right["pos"] , 
-                    vr_origin_euler=self.vr_origin_right["euler"],
-                    robot_origin_pos= self.robot_origin_right["pos"] ,
-                    robot_origin_euler= self.robot_origin_right["euler"],
-                )
-            
-            action_right[-1]=round(self.right_arm.robot.current_gripper_position/1000)   #归一化
-                
-            # Convert velocity to position target
-            target_pos, target_euler, target_gripper = self.velocity_to_position_target( velocity_action=action_right )
-            pos_scale =1
-            euler_scale = 1
-           
-            delta=np.asarray([target_pos[0]*1000*pos_scale,target_pos[1]*1000*pos_scale,target_pos[2]*1000*pos_scale,-target_euler[0]*euler_scale,-target_euler[1]*euler_scale,target_euler[2]*euler_scale])
-            delta_test=np.asarray([target_pos[0]*1000*pos_scale,target_pos[1]*1000*pos_scale,target_pos[2]*1000*pos_scale,-target_euler[0]*euler_scale,-target_euler[1]*euler_scale,0])
-            print(f"delta: {delta}")
-
-            # Send action to robot (or simulate)
-            if not self.debug:
-                # Send action to robot - DEOXYS EXPECTS QUATERNIONS
-                _step_num=5
-                if self.enable_performance_mode:_step_num=2
-                
-                try:
-                    self.right_arm.robot.robot.servo_p_extend(delta, move_mode=1, step_num=_step_num)   
-                except Exception as e:
-                    print(f"    ? Error in robot move: {e}")         
-        else:
-            # new_left_robot_state = robot_state["left"]
-            action_right = np.zeros(7)
-            action_right[-1]=round(self.right_arm.robot.current_gripper_position/1000)   #归一化
-            if not self.debug and self._state["right_grip_released"]:
-                print("    right Gripper released  Stop!") 
-                self.right_arm.robot.robot.servo_move_enable(False)
-                self.right_arm.robot.stop_motion()
-                self._state["right_grip_released"]=False
-
+        
 
         # self._last_action = np.concatenate([action_right.copy(), action_left.copy()])
-        self._last_action = np.concatenate([action_left.copy(), action_right.copy()])  
+        self._last_action_left =action_left.copy()
         #状态更新  如果有一个臂使能  就更新状态 
         if  info["right_movement_enabled"] or info["left_movement_enabled"]:
             # Not moving - use current robot state
@@ -2244,8 +2508,7 @@ class OculusVRServer:
             new_robot_state = robot_state
             with self._robot_state_lock:    
                 self._latest_robot_state = new_robot_state
-
-      
+  
           
         
         # Note: Data recording is now handled by the dedicated recording thread
